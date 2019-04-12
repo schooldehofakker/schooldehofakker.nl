@@ -1,8 +1,8 @@
-const version = '20190412103806';
+const version = '20190412211907';
 const cacheName = `static::${version}`;
 
 const buildContentBlob = () => {
-  return ["/general/2016/08/29/example-post-three/","/history/2016/08/28/example-post-two/","/general/2016/08/27/example-post-one/","/categories/","/elements/","/blog/","/","/manifest.json","/offline/","/assets/search.json","/search/","/assets/styles.css","/thanks/","/redirects.json","/feed.xml","/sitemap.xml","/robots.txt","/blog/page2/","/assets/logos/logo.svg", "/assets/default-offline-image.png", "/assets/scripts/fetch.js"
+  return ["/open%20dag/2019/04/11/open-dag-2019-de-hofakker-school/","/categorie%C3%ABn/","/contact/","/elements/","/nieuws/","/","/manifest.json","/offline/","/assets/search.json","/assets/styles.css","/thanks/","/zoeken/","/redirects.json","/feed.xml","/sitemap.xml","/robots.txt","/assets/logos/logo.svg", "/assets/default-offline-image.png", "/assets/scripts/fetch.js"
   ]
 }
 
