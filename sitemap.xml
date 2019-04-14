@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/open%20dag/2019/04/11/open-dag-2019-de-hofakker-school/</loc>
+<loc>http://localhost:4000/contact/2019/04/11/open-dag-2019-de-hofakker-school/</loc>
 <lastmod>2019-04-11T00:00:00+02:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/nieuws/2019/04/14/school-de-hofakker-onder-de-aandacht-in-tijdschrift-vrije-opvoedkunst/</loc>
+<lastmod>2019-04-14T00:00:00+02:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/categorie%C3%ABn/</loc>
