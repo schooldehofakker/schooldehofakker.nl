@@ -1,25 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/open%20dag/2019/04/11/open-dag-2019-de-hofakker-school/</loc>
+<loc>https://schooldehofakker.nl/nieuws/2019/04/11/open-dag-2019-de-hofakker-school/</loc>
 <lastmod>2019-04-11T00:00:00+02:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/categorie%C3%ABn/</loc>
+<loc>https://schooldehofakker.nl/nieuws/2019/04/14/school-de-hofakker-onder-de-aandacht-in-tijdschrift-vrije-opvoedkunst/</loc>
+<lastmod>2019-04-14T00:00:00+02:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/contact/</loc>
+<loc>https://schooldehofakker.nl/categorie%C3%ABn/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/elements/</loc>
+<loc>https://schooldehofakker.nl/contact/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/nieuws/</loc>
+<loc>https://schooldehofakker.nl/elements/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/</loc>
+<loc>https://schooldehofakker.nl/nieuws/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/zoeken/</loc>
+<loc>https://schooldehofakker.nl/</loc>
+</url>
+<url>
+<loc>https://schooldehofakker.nl/zoeken/</loc>
 </url>
 </urlset>

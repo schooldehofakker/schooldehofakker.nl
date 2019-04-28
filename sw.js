@@ -1,8 +1,8 @@
-const version = '20190412211907';
+const version = '20190428223710';
 const cacheName = `static::${version}`;
 
 const buildContentBlob = () => {
-  return ["/open%20dag/2019/04/11/open-dag-2019-de-hofakker-school/","/categorie%C3%ABn/","/contact/","/elements/","/nieuws/","/","/manifest.json","/offline/","/assets/search.json","/assets/styles.css","/thanks/","/zoeken/","/redirects.json","/feed.xml","/sitemap.xml","/robots.txt","/assets/logos/logo.svg", "/assets/default-offline-image.png", "/assets/scripts/fetch.js"
+  return ["/nieuws/2019/04/14/school-de-hofakker-onder-de-aandacht-in-tijdschrift-vrije-opvoedkunst/","/nieuws/2019/04/11/open-dag-2019-de-hofakker-school/","/categorie%C3%ABn/","/contact/","/elements/","/nieuws/","/","/manifest.json","/offline/","/assets/search.json","/assets/styles.css","/thanks/","/zoeken/","/redirects.json","/feed.xml","/sitemap.xml","/robots.txt","/assets/logos/logo.svg", "/assets/default-offline-image.png", "/assets/scripts/fetch.js"
   ]
 }
 
