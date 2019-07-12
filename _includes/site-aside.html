@@ -1,22 +1,25 @@
 <aside class="aside  typeset  aside--{{ include.align | default: 'right' }}">
 
   {% if page.layout == "post" %}
-    <section class="section  section--related-posts">
-      {% include post-related.html %}
-    </section>
+  <section class="section  section--related-posts">
+    {% include post-related.html %}
+  </section>
 
   {% elsif page.layout == "page" or page.layout == "home" or page.layout == "blog" %}
-    <section class="section  section--description">
-      <h3>De Hofakker</h3>
-      <p>{{ site.description }}</p>
-      {% include nav-social.html %}
-    </section>
+  <section class="section  section--description">
+    <h3>De Hofakker</h3>
+    <p>{{ site.description }}</p>
+    {% include nav-social.html %}
+    {% include site-important.html %}
+    <h3>Veiligheid</h3>
+    <p>De Hofakker heeft, zoals ook gevraagd door de inspectie van het onderwijs, <a href="/assets/Meldcode-huiselijk-geweld.pdf">een meldcode voor huiselijk geweld en kindermishandeling</a></p>
+  </section>
 
   {% elsif page.layout == "categories" %}
-    <section class="section  section--category-index">
-      <h3>Index</h3>
-      {% include nav-categories.html %}
-    </section>
+  <section class="section  section--category-index">
+    <h3>Index</h3>
+    {% include nav-categories.html %}
+  </section>
 
   {% endif %}
 
