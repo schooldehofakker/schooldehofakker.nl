@@ -1,8 +1,8 @@
-const version = '20190712115539';
+const version = '20190715110451';
 const cacheName = `static::${version}`;
 
 const buildContentBlob = () => {
-  return ["/2019/07/12/meldcode-huiselijk-geweld-de-hofakker-school/","/2019/05/01/school-de-hofakker-op-radio-gelderland/","/2019/04/14/school-de-hofakker-onder-de-aandacht-in-tijdschrift-vrije-opvoedkunst/","/2019/04/11/open-dag-2019-de-hofakker-school/","/categorie%C3%ABn/","/contact/","/donaties/","/elements/","/nieuws/","/","/kracht-van-de-hofakker/","/leraren/","/manifest.json","/offline/","/assets/search.json","/assets/styles.css","/thanks/","/zoeken/","/redirects.json","/feed.xml","/sitemap.xml","/robots.txt","/assets/logos/logo.svg", "/assets/default-offline-image.png", "/assets/scripts/fetch.js"
+  return ["/2019/05/01/school-de-hofakker-op-radio-gelderland/","/2019/04/14/school-de-hofakker-onder-de-aandacht-in-tijdschrift-vrije-opvoedkunst/","/2019/04/11/open-dag-2019-de-hofakker-school/","/categorie%C3%ABn/","/contact/","/donaties/","/elements/","/nieuws/","/","/kracht-van-de-hofakker/","/leraren/","/manifest.json","/offline/","/assets/search.json","/assets/styles.css","/thanks/","/zoeken/","/redirects.json","/feed.xml","/sitemap.xml","/robots.txt","/assets/logos/logo.svg", "/assets/default-offline-image.png", "/assets/scripts/fetch.js"
   ]
 }
 
