@@ -1,6 +1,6 @@
 ---
 title: Onze Leraren
-feature_image: "/assets/muurschildering.png"
+feature_image: "/assets/banner_leraren.jpg"
 excerpt: "Leraren van de Hofakker"
 aside: true
 ---

@@ -1,8 +1,6 @@
 ---
 title: Kracht van de Hofakker
-feature_text: |
-  Kleinschalig, staatsvrij, geïnspireerd door de vrije school, vernieuwend
-feature_image: "/assets/muurschildering.png"
+feature_image: "/assets/banner_kring.jpg"
 excerpt: "Kracht van de Hofakker, kleinschaligheid, staatsvrij, vrije school, vernieuwend"
 aside: true
 ---

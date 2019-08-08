@@ -68,9 +68,7 @@ collections:
     title: Nieuws # Needed for Siteleaf
     output: true
     description: "Nieuwsberichten, aankondigingen en wetenswaardigheden van de Hofakker" # The post list page content
-    feature_text: |
-      Nieuws van de Hofakker
-    feature_image: "/assets/muurschildering.png"
+    feature_image: "/assets/banner_nieuws.jpg"
 
 # 6. Jekyll collections settings
 defaults:

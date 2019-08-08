@@ -1,8 +1,6 @@
 ---
 title: Contact
-feature_text: |
-  We kijken er naar uit om je te spreken!
-feature_image: "/assets/muurschildering.png"
+feature_image: "/assets/banner_contact.jpg"
 excerpt: "Neem contact op met School de Hofakker"
 ---
 Geïnspireerd door onze visie?
