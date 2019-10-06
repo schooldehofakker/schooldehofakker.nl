@@ -87,7 +87,7 @@ description: "Kleinschalig onderwijs dicht bij de natuur vanuit een antroposofis
 url: "https://schooldehofakker.nl" # Site url, also used in jekyll-seo-tag
 baseurl: ""
 repo: "https://github.com/schooldehofakker/schooldehofakker.nl"
-email: "webmaster@schooldehofakker.nl"
+email: "rogier@schooldehofakker.nl"
 # disqus: "alembic-1" # Blog post comments, uncomment the option and set the site ID from your Disqus account
 # google_analytics: ''
 # service_worker: false # Will turn off the service worker if set to false
@@ -123,10 +123,10 @@ social_links: # Appears in sidebar. Set the urls then uncomment and comment out 
   # Twitter: https://twitter.com/de_hofakker
   # LinkedIn: https://www.linkedin.com/in/daviddarnes
   # Google+: https://plus.google.com/+DavidDarnes
-  # GitHub: https://github.com/daviddarnes
+  GitHub: https://github.com/schooldehofakker/schooldehofakker.nl
   FaceBook: https://www.facebook.com/schooldehofakker/
   Instagram: https://www.instagram.com/schooldehofakker/
-  link: https://www.schooldehofakker.nl
+  link: https://schooldehofakker.nl
   RSS: /feed.xml
 
 sharing_links:
