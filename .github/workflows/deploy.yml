@@ -1,0 +1,17 @@
+name: CI
+on: [push]
+  deploy:
+    name: FTP-Deploy-Action
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: FTP-Deploy-Action
+      uses: SamKirkland/FTP-Deploy-Action@master
+      env:
+        FTP_SERVER: ${{secrets.FTP_SERVER}}
+        FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        LOCAL_DIR: docs
+        REMOTE_DIR: Website_2019_nieuwe_stijl
+        ARGS: --delete
+        # --delete arg will delete files on the server if you've deleted them in git
