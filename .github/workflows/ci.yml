@@ -24,4 +24,4 @@ jobs:
           gem install bundler -v 1.17.3
           bundle install --jobs 4 --retry 3
       - name: Test
-        run: bundle exec rake
+        run: jekyll build -d docs && ls -al docs/
