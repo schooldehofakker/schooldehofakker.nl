@@ -84,9 +84,9 @@ lang: nl-NL # Set the site language
 title: "School de Hofakker" # Site name or title, also used in jekyll-seo-tag
 logo: "/assets/logos/logo.svg" # Site logo, also used in jekyll-seo-tag
 description: "Kleinschalig onderwijs dicht bij de natuur vanuit een antroposofisch mensbeeld" # Site description and default description, also used in jekyll-seo-tag
-url: "https://hofakker.blijblijblij.com" # Site url, also used in jekyll-seo-tag
+url: "https://schooldehofakker.nl" # Site url, also used in jekyll-seo-tag
 baseurl: ""
-repo: "https://github.com/schooldehofakker/"
+repo: "https://github.com/schooldehofakker/schooldehofakker.nl"
 email: "webmaster@schooldehofakker.nl"
 # disqus: "alembic-1" # Blog post comments, uncomment the option and set the site ID from your Disqus account
 # google_analytics: ''
@@ -120,7 +120,7 @@ navigation_footer:
   Kleinschalig onderwijs dicht bij de natuur vanuit een antroposofisch mensbeeld
 
 social_links: # Appears in sidebar. Set the urls then uncomment and comment out as desired
-  Twitter: https://twitter.com/de_hofakker
+  # Twitter: https://twitter.com/de_hofakker
   # LinkedIn: https://www.linkedin.com/in/daviddarnes
   # Google+: https://plus.google.com/+DavidDarnes
   # GitHub: https://github.com/daviddarnes
