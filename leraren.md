@@ -16,7 +16,7 @@ De Antroposofie en het Boeddhisme zijn twee grote inspiratiebronnen en leerschol
 ‘Juf hoor je de paarden rennen?’ Dit brengt mij er meteen op om het spelletje van de smid te doen, waarbij we nieuwe hoefijzers onder de paardenvoetjes zetten, en te zingen van het witte paard met sterren in zijn manen en maanlicht in zijn staart. Het is alsof in deze omgeving het lesmateriaal zich als vanzelf aanbiedt.
 
 ### Hans Wynberg
-{% include figure.html image="/assets/hans.png" caption="Leraar klas 1 – 6" position="right" width="300" height="800" %}
+{% include figure.html image="/assets/hans.png" caption="Leraar Onderbouw" position="right" width="300" height="800" %}
 
 Zo’n 8 jaar geleden begon mijn pad als docent, bij de middelbare Vrije school in Amsterdam. Daar is ook mijn passie voor vernieuwend onderwijs aangestoken. Zelf je lessen ontwerpen, betekenisvol onderwijs geven en de ontwikkeling van het kind centraal stellen, zijn waarden waar ik daar contact mee maakte en die ik belangrijk vind.
 
@@ -25,7 +25,7 @@ Na vier jaar en een eerste graad in Biologie rijker ging ik verder en begon ik e
 Toen ik over de Hofakker hoorde klonk het me als muziek in de oren. Een vrije school waar les gegeven kan worden op een manier die kinderen echt tot ontwikkeling brengt, waar de echte wereld een plek heeft en dichtbij is zodat kinderen daarmee contact kunnen maken. Waar leerlingen de wereld kunnen verkennen en ervan leren. Ik zie het als een voorrecht dat ik daaraan mag proeven en kan bijdragen.
 
 ###  Reshma Eggink
-{% include figure.html image="/assets/reshma.png" caption="Leraar klas 1 – 6" position="right" width="300" height="800" %}
+{% include figure.html image="/assets/reshma.jpeg" caption="Leraar Onderbouw" position="right" width="300" height="800" %}
 
 Ik ben Reshma Eggink en zal na de zomervakantie les gaan geven aan de onderbouw. Op het moment woon ik met mijn partner Jeroen en drie zoontjes van 4, 6 en 8 jaar in Haarlem, waar ik met veel plezier werk op de vrije school. 
 
