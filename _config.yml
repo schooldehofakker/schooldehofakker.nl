@@ -89,7 +89,16 @@ baseurl: ""
 repo: "https://github.com/schooldehofakker/schooldehofakker.nl"
 email: "rogier@schooldehofakker.nl"
 # disqus: "alembic-1" # Blog post comments, uncomment the option and set the site ID from your Disqus account
-# google_analytics: ''
+# google_analytics: '<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-11677999-17"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-11677999-17');
+</script>
+'
 # service_worker: false # Will turn off the service worker if set to false
 css_inline: true # Will insert all styles into a single <style> block in the <head> element and remove the style <link> reference
 
