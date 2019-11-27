@@ -9,8 +9,8 @@ Neem contact met ons op om kennis met ons te maken en te kijken of er een klik i
 
 {% include site-form.html %}
 ### Postadres:
-School De Hofakker
-Veldwijkerweg 1
+School De Hofakker<br>
+Veldwijkerweg 1<br>
 7251 HE Vorden
 ---
 ### Veiligheid
