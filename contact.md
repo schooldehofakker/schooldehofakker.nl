@@ -3,11 +3,17 @@ title: Contact
 feature_image: "/assets/banner_contact.jpg"
 excerpt: "Neem contact op met School de Hofakker"
 ---
-Geïnspireerd door onze visie?
+Geinspireerd door onze visie?
 
 Neem contact met ons op om kennis met ons te maken en te kijken of er een klik is tussen jou, je kind(eren) en onze school.
 
 {% include site-form.html %}
+
+### Postadres:
+School De Hofakker<br>
+Veldwijkerweg 1<br>
+7251 HE<br>
+Vorden
 
 ---
 ### Veiligheid
