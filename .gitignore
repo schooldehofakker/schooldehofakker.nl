@@ -5,3 +5,4 @@ alembic-jekyll-theme-*.gem
 _site
 
 docs/CNAME
+.DS_Store
