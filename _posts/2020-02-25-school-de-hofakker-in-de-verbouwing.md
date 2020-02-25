@@ -1,7 +1,7 @@
 ---
 title: School de Hofakker in de verbouwing
 excerpt: " School de Hofakker in de verbouwing"
-feature_image: "/assets/Kleuterschooltje Hofakker.jpg"
+feature_image: "/assets/banner_voorzijde_school.jpg"
 aside: true
 
 ---
