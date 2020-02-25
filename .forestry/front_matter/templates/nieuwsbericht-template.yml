@@ -11,8 +11,10 @@ fields:
 - type: file
   name: feature_image
   label: feature_image
+  default: "/assets/banner_zoeken.jpg"
 - type: boolean
   name: aside
   label: aside
+  default: true
 pages:
 - _posts/2020-02-25-school-de-hofakker-in-de-verbouwing.md
