@@ -14,3 +14,5 @@ fields:
 - type: boolean
   name: aside
   label: aside
+pages:
+- _posts/school-de-hofakker-in-de-verbouwing.md
