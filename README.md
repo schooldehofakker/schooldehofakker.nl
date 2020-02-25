@@ -6,3 +6,10 @@
 
 # schooldehofakker.nl
 Publieke website van [School de Hofakker](https://schooldehofakker.nl)
+
+![Alt text](schooldehofakker.nl_.png "Screenshot")
+
+Met het kleurenpalet:
+
+![Alt text](kleurpalet.png "kleurenpalet")
+
