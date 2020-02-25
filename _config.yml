@@ -83,6 +83,7 @@ lang: nl-NL # Set the site language
 title: "School de Hofakker" # Site name or title, also used in jekyll-seo-tag
 logo: "/assets/logos/logo.svg" # Site logo, also used in jekyll-seo-tag
 description: "Kleinschalig onderwijs dicht bij de natuur vanuit een antroposofisch mensbeeld" # Site description and default description, also used in jekyll-seo-tag
+destination: ./build
 url: "https://schooldehofakker.nl" # Site url, also used in jekyll-seo-tag
 baseurl: ""
 repo: "https://github.com/schooldehofakker/schooldehofakker.nl"
