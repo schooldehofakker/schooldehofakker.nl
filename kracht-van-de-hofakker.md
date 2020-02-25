@@ -49,4 +49,4 @@ In de school is ook veel aandacht voor groepsvorming en sociale dynamiek. We bes
 
 {% include figure.html image="/assets/kring.jpg" caption="" width="800" height="800" %}
 
-{% include figure.html image="/assets/ei.jpg" caption="" width="800" height="800" %}
+{% include figure.html image="/assets/dealwithit.gif" caption="" width="800" height="800" %}
