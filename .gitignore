@@ -6,3 +6,4 @@ _site
 
 docs/CNAME
 .DS_Store
+build/*
