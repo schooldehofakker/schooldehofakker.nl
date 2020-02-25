@@ -48,5 +48,3 @@ Zo krijgt de wereld en de lessen voor de kinderen betekenis en ontwikkelen ze ei
 In de school is ook veel aandacht voor groepsvorming en sociale dynamiek. We besteden expliciet aandacht aan hoe de kinderen en de groep functioneert. Zo leren we elkaar vertrouwen en ontstaat de veiligheid die nodig is om te laten zien wie je bent, wat er met je gebeurt en wat je nodig hebt. Doordat de kinderen van een diverse leeftijd met elkaar samen zijn en werken, ontstaat een sfeer waarin kinderen van verschillende leeftijden elkaar kunnen helpen en ondersteunen.
 
 {% include figure.html image="/assets/kring.jpg" caption="" width="800" height="800" %}
-
-{% include figure.html image="/assets/dealwithit.gif" caption="" width="800" height="800" %}
