@@ -49,4 +49,4 @@ In de school is ook veel aandacht voor groepsvorming en sociale dynamiek. We bes
 
 {% include figure.html image="/assets/kring.jpg" caption="" width="800" height="800" %}
 
-{% include figure.html image="/[uploads/dealwithit.gif](https://github.com/schooldehofakker/schooldehofakker.nl/commit/d7c2f661a6ce8d604546e3faf35a041446babaed#diff-dbf7620e4cf9e4dd7f59ff255eb46492 "uploads/dealwithit.gif")" caption="" width="800" height="800" %}
+{% include figure.html image="/assets/ei.jpg" caption="" width="800" height="800" %}
