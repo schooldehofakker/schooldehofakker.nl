@@ -113,7 +113,16 @@ PLATFORMS
 DEPENDENCIES
   alembic-jekyll-theme
   jekyll (~> 3.8.5)
+  jekyll-commonmark
+  jekyll-default-layout
   jekyll-feed (~> 0.6)
+  jekyll-include-cache
+  jekyll-mentions
+  jekyll-paginate
+  jekyll-redirect-from
+  jekyll-seo-tag
+  jekyll-sitemap
+  jemoji
   rake
   tzinfo-data
 

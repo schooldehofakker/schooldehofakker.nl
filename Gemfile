@@ -21,6 +21,15 @@ gem 'alembic-jekyll-theme'
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.6"
+  gem "jekyll-sitemap"
+  gem "jekyll-mentions"
+  gem "jekyll-paginate"
+  gem "jekyll-seo-tag"
+  gem "jekyll-redirect-from"
+  gem "jekyll-default-layout"
+  gem "jekyll-commonmark"
+  gem "jekyll-include-cache"
+  gem "jemoji"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
