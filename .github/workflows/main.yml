@@ -1,9 +1,38 @@
-name: Jekyll Deploy
+name: Test and Deploy
 
 on: [push]
 
 jobs: 
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Set up Ruby
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: 2.6.5
+
+      - name: Install dependencies
+        run: |
+          gem install bundler
+          bundle install
+
+      - name: Run Rubocop
+        run: rubocop
+
+      - name: Build to _site
+        run: |
+          jekyll build -d _site
+
+      - name: Run Rspec
+        run: rspec -fd spec
+
   build_and_deploy:
+    # run only on master branch
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    name: Deploy
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
