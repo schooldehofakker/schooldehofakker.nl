@@ -22,8 +22,8 @@ jobs:
       - name: Run Rubocop
         run: rubocop
 
-      # - name: Run Rspec
-      #   run: rspec
+      - name: Run Rspec
+        run: rspec
 
   build_and_deploy:
     # run only on master branch
