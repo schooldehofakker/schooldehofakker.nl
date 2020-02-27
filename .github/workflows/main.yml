@@ -27,7 +27,7 @@ jobs:
           jekyll build -d _site
 
       - name: Run Rspec
-        run: rspec
+        run: rspec -fd spec
 
   build_and_deploy:
     # run only on master branch
