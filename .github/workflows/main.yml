@@ -14,23 +14,15 @@ jobs:
         with:
           ruby-version: 2.6.5
 
-      - name: Set up Node
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12.15.0
-
       - name: Install dependencies
         run: |
-          # fix: Unable to fetch some archives
-          sudo apt-get update
-          sudo apt-get -yqq install chromium-chromedriver
           gem install bundler
           bundle install
 
       - name: Run Rubocop
         run: rubocop
 
-      - name: Run tests
+      - name: Run Rspec
         run: rspec
 
   build_and_deploy:
