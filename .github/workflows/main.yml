@@ -26,6 +26,8 @@ jobs:
         run: rspec
 
   build_and_deploy:
+    # run only on master branch
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
     name: Deploy
     runs-on: ubuntu-latest
     steps:
