@@ -22,6 +22,10 @@ jobs:
       - name: Run Rubocop
         run: rubocop
 
+      - name: Build to _site
+        run: |
+          jekyll build -d _site
+
       - name: Run Rspec
         run: rspec
 
