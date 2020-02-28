@@ -56,11 +56,38 @@ Forestry is een tool die de bestanden van de website kan inlezen en daar een gra
 waardoor je direct vanuit de browser content wijzigingen kan doorvoeren, maar zonder aan de misschien complexere 
 Markdown of structuur van de site blootgesteld te worden.
 
-Om met Forestry aan de slag te gaan moet eerst inloggen op [https://app.forestry.io/login](https://app.forestry.io/login).
+Om met Forestry aan de slag te gaan moet je eerst inloggen op [https://app.forestry.io/login](https://app.forestry.io/login).
 Gebruik daarvoor je github inlog:
 
 ![Alt text](assets/instructies/1-forestry-inlog.png "Login op forestry")
 
+Selecteer de Hofakker:
+
+![Alt text](assets/instructies/2-forestry-selecteer-site.png "Selecteer de site")
+
+Je komt dan in het volgende overzicht:
+
+![Alt text](assets/instructies/3-forestry-overzicht.png "Overzicht")
+
+Momenteel zijn 2 typen content ondersteund, pagina of `Pages`:
+
+![Alt text](assets/instructies/4-forestry-pages.png "Pages")
+
+En de collectie Nieuwsberichten of `Posts`
+
+![Alt text](assets/instructies/6-forestry-posts.png "Posts")
+
+Je kan een nieuw Nieuwsbericht aanmaken:
+
+![Alt text](assets/instructies/5-forestry-post-nieuw.png "Post nieuw)
+
+Of bestaande berichten aanpassen:
+
+![Alt text](assets/instructies/7-forestry-post-bijwerken.png "Post bewerken")
+
+Afbeeldingen kunnen toegevoegd worden onder Media.
+
+![Alt text](assets/instructies/8-forestry-media.png "Media toevoegen")
 
 ## Het kleurenpalet
 
