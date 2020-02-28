@@ -15,8 +15,6 @@ Veldwijkerweg 1<br>
 7251 HE<br>
 Vorden
 
-{% include map.html id="13hbh6TOpeYgK5OuNTGMqRh8ReSOY9DHM&ll" %}
-
 ---
 ### Veiligheid
 De Hofakker heeft, zoals ook gevraagd door de inspectie van het onderwijs, [een meldcode voor huiselijk geweld en kindermishandeling](/assets/Meldcode-huiselijk-geweld.pdf)
