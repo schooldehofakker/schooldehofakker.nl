@@ -1,9 +1,9 @@
 ---
-feature_image: "/assets/20190317_120325, school.jpg"
 aside: true
 title: 'UPDATE: School de Hofakker in de verbouwing'
 excerpt: Met vereende krachten wordt er doorgewerkt om op tijd de kleuterklas af te
   maken
+feature_image: "/assets/banner_voorzijde_school.jpg"
 
 ---
 Met vereende krachten wordt er doorgewerkt om op tijd de kleuterklas af te maken.
