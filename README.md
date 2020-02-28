@@ -29,7 +29,7 @@ Hier een voorbeeld van de voorpagina van de Hofakker:
 
 De generator kan dan die tekst omzetten in:
 
-![Alt text](schooldehofakker.nl_.png "Screenshot")
+![Alt text](assets/instructies/0-index.png "Index pagina")
 
 De vormgeving eromheen is gebasseerd op een template genaamd [Alembic](https://jekyllthemes.io/theme/alembic).
 
@@ -38,21 +38,9 @@ die opgeslagen wordt via dit [configuratie bestand](https://github.com/schooldeh
 
 Pagina's kunnen op verschillende manieren bewerkt worden:
 
-### Optie 1, via github.com
+### Optie 1, via een Content Management tool: Forestry.io
 
-door een nieuw bestand te maken:
-
-![Alt text](assets/instructies/1-github-create-file.png "Maak bestand aan")
-
-of door een bestaand bestand te bewerken:
-
-![Alt text](assets/instructies/2-github-edit-file.png "Pas een bestand aan")
-
-Dit kan lastig zijn, en is niet voor iedereen weggelegd, daarom is het handiger om een Content Management Tool te gebruiken:
-
-### Optie 2, via een Content Management tool: Forestry.io
-
-Forestry is een tool die de bestanden van de website kan inlezen en daar een grafische schil omheen kan maken 
+Forestry is een tool die de bestanden van de website vanuit github kan inlezen en daar een grafische schil omheen kan maken 
 waardoor je direct vanuit de browser content wijzigingen kan doorvoeren, maar zonder aan de misschien complexere 
 Markdown of structuur van de site blootgesteld te worden.
 
@@ -79,7 +67,7 @@ En de collectie Nieuwsberichten of `Posts`
 
 Je kan een nieuw Nieuwsbericht aanmaken:
 
-![Alt text](assets/instructies/5-forestry-post-nieuw.png "Post nieuw)
+![Alt text](assets/instructies/5-forestry-post-nieuw.png "Post nieuw")
 
 Of bestaande berichten aanpassen:
 
@@ -88,6 +76,20 @@ Of bestaande berichten aanpassen:
 Afbeeldingen kunnen toegevoegd worden onder Media.
 
 ![Alt text](assets/instructies/8-forestry-media.png "Media toevoegen")
+
+### Optie 2, via github.com
+
+door een nieuw bestand te maken:
+
+![Alt text](assets/instructies/1-github-create-file.png "Maak bestand aan")
+
+of door een bestaand bestand te bewerken:
+
+![Alt text](assets/instructies/2-github-edit-file.png "Pas een bestand aan")
+
+Dit kan lastig zijn, en is niet voor iedereen weggelegd, daarom is het handiger om een Content Management Tool te gebruiken:
+
+> Forestry wordt geadviseerd te gebruiken, github misschien handiger wanneer je snel een wijziging wil doen
 
 ## Het kleurenpalet
 
