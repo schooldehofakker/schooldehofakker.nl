@@ -11,8 +11,7 @@ Publieke website van [School de Hofakker](https://schooldehofakker.nl)
 ## beheren van de website
 
 Deze website is gemaakt met een statische website generator genaamd [jekyll](https://jekyllrb.com/). Dit klinkt
-spannender dan het is, wat een generator doet is simpele tekst bestanden geschreven in een bepaald formaat 
-((markdown)[https://guides.github.com/features/mastering-markdown/]) omzetten in html, de structuur waar alle 
+spannender dan het is, wat een generator doet is simpele tekst bestanden geschreven in een [bepaald formaat](https://guides.github.com/features/mastering-markdown/) omzetten in html, de structuur waar alle 
 websites op het internet op gebouwd zijn.
 
 Hier een voorbeeld van de voorpagina van de Hofakker:
@@ -31,6 +30,8 @@ Hier een voorbeeld van de voorpagina van de Hofakker:
 De generator kan dan die tekst omzetten in:
 
 ![Alt text](schooldehofakker.nl_.png "Screenshot")
+
+De vormgeving eromheen is gebasseerd op een template genaamd [Alembic](https://jekyllthemes.io/theme/alembic).
 
 Het genereren en omzetten is geautomatiseerd, en gebeurt [automatisch bij iedere wijziging](https://github.com/schooldehofakker/schooldehofakker.nl/actions) 
 die opgeslagen wordt via dit [configuratie bestand](https://github.com/schooldehofakker/schooldehofakker.nl/blob/master/.github/workflows/main.yml).
