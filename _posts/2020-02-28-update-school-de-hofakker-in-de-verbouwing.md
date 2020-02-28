@@ -24,6 +24,6 @@ Harde werkers moeten wel voldoende eten, iedereen helpt!
 
 ![](/assets/Verbouwing 11.jpeg)
 
-Mark blijft onverstoord doorwerken om de vloer mooi te krijgen.
+Mark blijft onverstoorbaar doorwerken om de vloer mooi te krijgen.
 
 ![](/assets/Verbouwing 12.jpeg)
