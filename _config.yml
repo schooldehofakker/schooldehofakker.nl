@@ -108,7 +108,6 @@ favicons: # Favicons are also used in the manifest file. Syntax is 'size: path'
 # 9. Site navigation
 navigation_header:
   Home: /
-  # Elements: /elements/
   Onze Kracht: /kracht-van-de-hofakker/
   Onze Leraren: /leraren/
   Vacatures: /vacatures/
@@ -123,8 +122,6 @@ navigation_footer:
 
 social_links: # Appears in sidebar. Set the urls then uncomment and comment out as desired
   # Twitter: https://twitter.com/de_hofakker
-  # LinkedIn: https://www.linkedin.com/in/daviddarnes
-  # Google+: https://plus.google.com/+DavidDarnes
   GitHub: https://github.com/schooldehofakker/schooldehofakker.nl
   FaceBook: https://www.facebook.com/schooldehofakker/
   Instagram: https://www.instagram.com/schooldehofakker/
@@ -132,6 +129,6 @@ social_links: # Appears in sidebar. Set the urls then uncomment and comment out 
   RSS: /feed.xml
 
 sharing_links:
-  Twitter: "#0d94e7"
-  Facebook: "#3B5998"
+  Twitter: "#77B82A"
+  Facebook: "#FBB901"
   Email: "info@schooldehofakker.nl"
