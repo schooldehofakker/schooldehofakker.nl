@@ -39,17 +39,15 @@ plugins:
 paginate: 2 # jekyll-paginate > items per page
 paginate_path: blog/page:num # jekyll-paginate > blog page
 # jekyll-mentions: https://twitter.com # jekyll-mentions > service used when @replying
-# twitter:
-#   username: de_hofakker # jekyll-seo-tag > Owners twitter username
-author: SchoolDeHofakker # jekyll-seo-tag > default author
-# social: # jekyll-seo-tag > social overrides
-#   name: David Darnes # jekyll-seo-tag > real name
-  # links:  # jekyll-seo-tag > social aliases (sameAs)
-    # - https://twitter.com/DavidDarnes
-    # - https://www.facebook.com/daviddarnes
-    # - https://www.linkedin.com/in/daviddarnes
-    # - https://plus.google.com/+DavidDarnes
-    # - https://github.com/daviddarnes
+twitter:
+   username: hofakker # jekyll-seo-tag > Owners twitter username
+author: School de Hofakker # jekyll-seo-tag > default author
+social: # jekyll-seo-tag > social overrides
+   name: School de Hofakker # jekyll-seo-tag > real name
+   links:  # jekyll-seo-tag > social aliases (sameAs)
+     - https://twitter.com/hofakker
+     - https://www.facebook.com/schooldehofakker/
+     - https://github.com/schooldehofakker
 # markdown: CommonMark # Markdown parse settings, CommonMark performs slightly better an others in build time
 # commonmark:
   # options: ["SMART", "FOOTNOTES"]
@@ -121,7 +119,7 @@ navigation_footer:
   Kleinschalig onderwijs dicht bij de natuur vanuit een antroposofisch mensbeeld
 
 social_links: # Appears in sidebar. Set the urls then uncomment and comment out as desired
-  # Twitter: https://twitter.com/de_hofakker
+  Twitter: https://twitter.com/hofakker
   GitHub: https://github.com/schooldehofakker/schooldehofakker.nl
   FaceBook: https://www.facebook.com/schooldehofakker/
   Instagram: https://www.instagram.com/schooldehofakker/
