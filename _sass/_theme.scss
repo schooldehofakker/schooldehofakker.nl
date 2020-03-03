@@ -149,18 +149,38 @@ body {
   @include breakpoint(break-1) {
     max-width: 34%;
     margin-left: 4%;
+    background: #DDEDD1;
+    border-radius: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding-bottom: 1rem;
+
+    h1,h2,h3,h4,h5,h6
+    {
+      color: #5A663C;
+    }
+    p {
+      color: $linkColour;
+    }
+
     @include flex(1, 0, auto);
+
     opacity: 0.5;
     transition: opacity .1s;
+
     .section {
       position: sticky;
       top: 0;
     }
+
     &--left {
       margin-left: 0;
       margin-right: 4%;
       order: -1;
     }
+
     &:hover {
       opacity: 1;
     }
