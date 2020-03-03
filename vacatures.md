@@ -2,7 +2,7 @@
 title: Vacatures
 feature_image: "/assets/banner_kring2.jpg"
 excerpt: Leerkracht en Inval leerkracht gezocht School de Hofakker in Vorden
-
+aside: true
 ---
 > Momenteel hebben we twee vacatures, voor klas 1-6 en Inval leerkracht voor de kleuterklas
 

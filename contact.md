@@ -2,6 +2,7 @@
 title: Contact
 feature_image: "/assets/banner_contact.jpg"
 excerpt: "Neem contact op met School de Hofakker"
+aside: true
 ---
 Geinspireerd door onze visie?
 
