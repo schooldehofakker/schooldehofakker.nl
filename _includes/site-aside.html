@@ -9,8 +9,8 @@
   <section class="section  section--description">
     <h3>De Hofakker</h3>
     <p>{{ site.description }}</p>
+    {% include site-alert.html %}
     {% include nav-social.html %}
-    {% include site-important.html %}
   </section>
 
   {% elsif page.layout == "categories" %}
