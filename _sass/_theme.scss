@@ -4,9 +4,7 @@ body {
   color: $bodyColour;
   height: 100%;
   display: flex;
-
   @include flex-direction(column);
-
   overflow-x: hidden;
 }
 
@@ -16,24 +14,21 @@ body {
   margin: 0 auto;
 }
 
+
 // Header, feature and footer
 .header,
 .footer {
   .nav {
     text-align: right;
   }
-
   .logo {
     @include flex(0 0 auto);
   }
-
   .container {
     @include flexbox;
     @include flex-direction(row);
     @include justify-content(space-between);
-
     padding: 1rem 0;
-
     @include breakpoint(break-1) {
       @include align-items(center);
     }
@@ -55,11 +50,9 @@ body {
   background: $featureBackgroundColour;
   background-size: cover;
   background-position: center;
-
   .container {
     min-height: 35vh;
     max-width: 60%;
-
     @include flex-direction(column);
     @include justify-content(center);
   }
@@ -69,10 +62,8 @@ body {
   display: inline-block;
   line-height: 0;
   max-height: 4rem;
-
   @include flexbox;
   @include align-items(center);
-
   img {
     max-height: 5rem;
   }
@@ -82,7 +73,6 @@ body {
   a {
     padding: .2rem;
   }
-
   &--social a {
     display: inline-block;
     line-height: 1;
@@ -98,29 +88,25 @@ body {
 .footer {
   background: $headingColour;
   color: $captionColour;
-
   a {
     color: $captionColour;
-
     &:hover {
       color: $backgroundColour;
     }
   }
-
   .container {
     @include flex-wrap(wrap);
   }
-
   .small {
     padding-top: 0;
   }
 }
 
+
 // Pagination nav
 .nav--paginator {
   @include flexbox;
   @include justify-content(space-between);
-
   color: $captionColour;
   text-align: center;
 }
@@ -129,15 +115,14 @@ body {
   min-width: 20%;
 }
 
+
 // Main content
 .main {
   @include flexbox;
   @include flex-direction(column);
   @include flex(1, 0, auto);
   @include justify-content(flex-start);
-
   margin-bottom: 1.6rem;
-
   @include breakpoint(break-1) {
     @include justify-content(center);
     @include flex-direction(row);
@@ -164,38 +149,18 @@ body {
   @include breakpoint(break-1) {
     max-width: 34%;
     margin-left: 4%;
-    background: #DDEDD1;
-    border-radius: 10px;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    padding-bottom: 1rem;
-
-    h1,h2,h3,h4,h5,h6
-    {
-      color: #5A663C;
-    }
-    p {
-      color: $linkColour;
-    }
-
     @include flex(1, 0, auto);
-
     opacity: 0.5;
     transition: opacity .1s;
-
     .section {
       position: sticky;
       top: 0;
     }
-
     &--left {
       margin-left: 0;
       margin-right: 4%;
       order: -1;
     }
-
     &:hover {
       opacity: 1;
     }
@@ -206,15 +171,14 @@ body {
   margin: 0;
 }
 
-// Lists
-alert.list {
-  list-style: none;
 
+// Lists
+.list {
+  list-style: none;
   &--nav {
     overflow: hidden;
     margin-bottom: var(--listHeight, 0);
   }
-
   .item--post,
   .item--result,
   .item--category {
@@ -228,13 +192,10 @@ alert.list {
       margin-left: .4rem;
       display: inline-block;
     }
-
-
     &:first-of-type {
       margin-left: 0;
     }
   }
-
   &--current {
     a {
       color: $captionColour;
@@ -242,10 +203,10 @@ alert.list {
   }
 }
 
+
 // Links, icons and images
 a .icon {
   transition: fill .1s;
-
   &:hover {
     fill: currentColor;
   }
@@ -266,18 +227,15 @@ img {
 
 .figure {
   line-height: 0;
-
   &--left {
     float: left;
     padding-right: .8rem;
   }
-
   &--right {
     float: right;
     text-align: right;
     padding-left: .8rem;
   }
-
   &--center {
     text-align: center;
     clear: both;
@@ -289,7 +247,6 @@ img {
   position: relative;
   padding-bottom: 56.25%;
   height: 0;
-
   iframe {
     position: absolute;
     top: 0;
@@ -315,10 +272,10 @@ video {
   width: 100%;
 }
 
+
 // Form elements and buttons
 .form {
   position: relative;
-
   &__legend {
     font-style: italic;
     color: $captionColour;
@@ -346,7 +303,6 @@ select {
   box-shadow: none;
   border-radius: 0;
   -webkit-appearance: none;
-
   .icon {
     margin: 0 0 .35rem;
   }
@@ -362,14 +318,12 @@ button,
   transition: box-shadow .1s;
   will-change: box-shadow;
   box-shadow: inset 0 0 0 2rem transparent;
-
   &:hover {
-    box-shadow: inset 0 0 0 2rem rgba(0, 0, 0, 0.25);
+    box-shadow: inset 0 0 0 2rem rgba(0,0,0,0.25);
   }
-
   &:active,
   &:focus {
-    box-shadow: inset 0 0 0 2rem rgba(0, 0, 0, 0.25);
+    box-shadow: inset 0 0 0 2rem rgba(0,0,0,0.25);
   }
 }
 
@@ -377,14 +331,11 @@ button,
   @include breakpoint(break-1) {
     display: none;
   }
-
-
   background: none;
   color: $linkColour;
   margin-bottom: 0;
   min-height: 4rem;
   min-width: 4rem;
-
   &:hover,
   &:focus {
     box-shadow: none;
@@ -400,7 +351,7 @@ textarea,
 select {
   &:focus,
   &:hover:focus {
-    outline: solid 0.12rem $focusColour;
+    outline: solid .12rem $focusColour;
     outline-offset: -.12rem;
   }
 }
@@ -417,7 +368,6 @@ textarea,
 select {
   width: 100%;
   border: 1px solid $captionColour;
-
   &:hover {
     border-color: $bodyColour;
   }
@@ -428,7 +378,7 @@ select {
 }
 
 textarea {
-  resize: vertical;
+    resize: vertical;
 }
 
 label {
@@ -451,15 +401,12 @@ pre code {
 ::-webkit-input-placeholder {
   opacity: 0.5;
 }
-
 ::-moz-placeholder {
   opacity: 0.5;
 }
-
 :-ms-input-placeholder {
   opacity: 0.5;
 }
-
 :-moz-placeholder {
   opacity: 0.5;
 }
@@ -470,18 +417,17 @@ pre code {
   text-shadow: none;
 }
 
+
 // Sassline overrides
 .typeset {
   a > code {
     text-shadow: none;
   }
-
   .button,
   button {
     background-image: none;
     text-shadow: none;
     color: $backgroundColour;
-
     &:hover,
     &:active,
     &:focus {
@@ -489,29 +435,33 @@ pre code {
       color: $backgroundColour;
     }
   }
-
   hr {
     width: 100%;
   }
-
   li {
     > p {
       padding: 0;
       margin: 0;
     }
   }
-
   .nav a {
     padding-left: 0;
     padding-right: 0;
     margin-left: .2rem;
     margin-right: .2rem;
   }
-
   pre {
     white-space: pre;
     overflow-x: scroll;
   }
 }
 
-
+.important {
+    background: #8ab43d;
+    border-radius: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    // margin-left: 1rem;
+    margin-right: 1rem;
+    padding-bottom: 1rem;
+}
