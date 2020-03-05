@@ -9,6 +9,8 @@ Het resultaat van alle harde werken mag er wezen, de kleuterklas is in de vakant
 
 Nog een bijzondere dank aan [Luijendijk hoveniers](https://luijendijk-hoveniers.nl/) voor het sponsoren en leveren van het zand en de stenen.
 
+Tevens dank aan [Bouwman boomverzorging](https://www.bouwmanboomverzorging.nl/) die hout gedoneerd heeft voor vensterbanken, de keukenplank en de kapstok.
+
 ![](/assets/2020-03-05-IMG_1048.JPG)
 
 ![](/assets/2020-03-05-IMG_1045.JPG)
