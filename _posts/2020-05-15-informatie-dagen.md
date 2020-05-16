@@ -15,7 +15,7 @@ Het is noodzakelijk om je op te geven (vul hieronder je gegevens in) want er is 
 Data:
 
 * 26 mei 13:45 (vol)
-* 2 juni 13:45 (3 plekken)
+* 2 juni 13:45 (2 plekken)
 * 17 juni 13:45 (vol)
 
 {% include site-form.html %}
