@@ -16,6 +16,6 @@ Data:
 
 * 26 mei 13:45 (vol)
 * 2 juni 13:45 (3 plekken)
-* 17 juni 13:45 (1 plek)
+* 17 juni 13:45 (vol)
 
 {% include site-form.html %}
