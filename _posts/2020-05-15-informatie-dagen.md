@@ -10,12 +10,10 @@ Vanwege covid19 is zoals eerder gemeld de opendag komen te vervallen, als altern
 
 Op deze dag kan je kennis maken met de docenten van de Hofakker, die uitleg geven over de school. Ook is er uitgebreid de mogelijkheid om vragen te stellen.
 
-Het is noodzakelijk om je op te geven (vul hieronder je gegevens in) want er is beperkt plek. Dit doen wij om de ouders die langs komen voldoende aandacht te kunnen geven.
+Het is noodzakelijk om je op te geven (vul [hier in het contact formulier](https://schooldehofakker.nl/contact/) je gegevens in) want er is beperkt plek. Dit doen wij om de ouders die langs komen voldoende aandacht te kunnen geven.
 
 Data:
 
 * 26 mei 13:45 (vol)
 * 2 juni 13:45 (2 plekken)
 * 17 juni 13:45 (vol)
-
-{% include site-form.html %}
