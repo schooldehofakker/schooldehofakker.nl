@@ -6,6 +6,8 @@ excerpt: Vanwege covid19 is de opendag komen te vervallen, daarom organiseren we
   middagen
 
 ---
+> de geplande informatie middagen zijn inmiddels vol geboekt...
+
 Vanwege covid19 is zoals eerder gemeld de opendag komen te vervallen, als alternatief organiseren we informatie middagen zodat geïnteresseerde ouders kunnen komen kijken op school.
 
 Op deze dag kan je kennis maken met de docenten van de Hofakker, die uitleg geven over de school. Ook is er uitgebreid de mogelijkheid om vragen te stellen.
@@ -15,5 +17,5 @@ Het is noodzakelijk om je op te geven (vul [hier in het contact formulier](https
 Data:
 
 * 26 mei 13:45 (vol)
-* 2 juni 13:45 (2 plekken)
+* 2 juni 13:45 (vol)
 * 17 juni 13:45 (vol)
