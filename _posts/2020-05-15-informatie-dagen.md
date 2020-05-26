@@ -19,3 +19,4 @@ Data:
 * 26 mei 13:45 (vol)
 * 2 juni 13:45 (vol)
 * 17 juni 13:45 (vol)
+* 30 juni (alleen bedoeld voor ouders waarvan de kinderen na de zomer instromen)
