@@ -22,23 +22,5 @@ jobs:
       - name: Run Rubocop
         run: rubocop
 
-      - name: Build to _site
-        run: |
-          jekyll build -d _site
-
       - name: Run Rspec
         run: rspec -fd spec
-
-  build_and_deploy:
-    # run only on master branch
-    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
-    name: Deploy
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v1
-      - name: Build & Deploy to GitHub Pages
-        env: 
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN_SCHOOL }}
-          GITHUB_REPOSITORY: ${{ secrets.GITHUB_REPOSITORY }}
-          GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
-        uses: BryanSchuetz/jekyll-deploy-gh-pages@master

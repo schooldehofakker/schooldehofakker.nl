@@ -5,15 +5,15 @@ x-app: &app
     context: .
     dockerfile: ./.dockerdev/Dockerfile
     args:
-      RUBY_VERSION: '2.6.3'
+      RUBY_VERSION: '2.6.6'
       PG_MAJOR: '11'
-      NODE_MAJOR: '11'
-      YARN_VERSION: '1.13.0'
+      NODE_MAJOR: '12'
+      YARN_VERSION: '1.22.4'
       BUNDLER_VERSION: '2.0.2'
   environment: &env
     NODE_ENV: development
     RAILS_ENV: ${RAILS_ENV:-development}
-  image: example-dev:1.1.0
+  image: hofakker:1
   tmpfs:
     - /tmp
 
