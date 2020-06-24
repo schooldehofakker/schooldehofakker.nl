@@ -3,7 +3,6 @@
 # do not forget to delete public/{404, 422, 500}.html
 # rm public/{404, 422, 500}.html
 class ErrorsController < ApplicationController
-
   def not_found
     render status: 404
   end
@@ -15,5 +14,4 @@ class ErrorsController < ApplicationController
   def internal_server_error
     render status: 500
   end
-
 end

@@ -17,6 +17,6 @@ module SchooldehofakkerNl
     # the framework and any gems in your application.
 
     # errors are now generated dynamically
-    config.exceptions_app = self.routes
+    config.exceptions_app = routes
   end
 end
