@@ -5,7 +5,21 @@ excerpt: Leerkracht en Inval leerkracht gezocht School de Hofakker in Vorden
 aside: true
 
 ---
-> Momenteel hebben we 1 vacature, Inval leerkracht voor de kleuterklas
+> Momenteel hebben we 2 vacatures
+
+#### Leerkracht voor onderbouw 
+
+Onze kleinschalige school in het buitengebied van Vorden zoekt een enthousiaste Vrije school leerkracht.
+
+Er is een vacature voor 2 dagen en je zal gaan samenwerken met de huidige 2 leerkrachten in klas 1-6.
+
+Met groeimogelijkheden om naar wens meer dagen te gaan werken.
+
+Steekwoorden: kleinschaligheid, verbinding met de natuur, onderwijsvernieuwend, dieren, buitenzijn, vrijheid van onderwijs.
+
+Spreekt dit je aan en wil je meer weten?
+
+Wij komen graag met je in gesprek.
 
 #### Inval leerkracht kleuterklas de Hofakker
 
