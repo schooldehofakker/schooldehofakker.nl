@@ -1,0 +1,43 @@
+<div class="feature" style="background-image: url(<%= asset_path 'banner_contact.jpg' %>) ">
+    <div class="container  typeset">
+    </div>
+</div>
+<main class="main  container">
+ <article class="article  article--page  content  typeset">
+   <h1>Contact</h1>
+   <p>Geinspireerd door onze visie?</p>
+   <p>Neem contact met ons op om kennis met ons te maken en te kijken of er een klik is tussen jou, je kind(eren) en onze school.</p>
+   <form class="form  form--contact" method="post" name="Contact" action="/thanks/">
+     <fieldset class="fieldset  form__fieldset">
+       <legend class="legend form__legend">Contact</legend>
+       <label class="label" for="name--contact">Je naam: <span class="required">*</span></label>
+       <input class="input" id="name--contact" type="text" name="name" value="" placeholder="Je naam" required="required" />
+       <label class="label" for="email--contact">Je email adres: <span class="required">*</span></label>
+       <input class="input" id="email--contact" type="email" name="email" value="" placeholder="email@website.com" required="required" />
+       <label class="label" for="message--contact">Je bericht: <span class="required">*</span></label>
+       <textarea class="textarea" id="message--contact" name="message" placeholder="Je bericht..." required="required"></textarea>
+       <input class="button" type="submit" value="Verstuur bericht" />
+       <br />
+       <small class="small"><span class="required">*</span> geeft aan dat het een verplicht veld is</small>
+         <input type="text" name="_gotcha" style="display:none" />
+         <input type="hidden" name="_subject" value="School de Hofakker submission from Contact" />
+         <input type="hidden" name="_next" value="/thanks/" />
+     </fieldset>
+   <script>
+       var email = "ln.rekkafohedloohcs@tcatnoc";
+       var unraveledEmail = email.split("").reverse().join("");
+       var form = document.querySelector(".form--contact");
+         form.setAttribute("action", "https://formspree.io/" + unraveledEmail);
+     </script>
+   <noscript>Please enable JavaScript to use the form.</noscript>
+   <h3 id="postadres">Postadres:</h3>
+   <p>School De Hofakker<br />
+   Veldwijkerweg 1<br />
+   7251 HE<br />
+   Vorden</p>
+   <hr />
+   <h3 id="veiligheid">Veiligheid</h3>
+   <p>De Hofakker heeft, zoals ook gevraagd door de inspectie van het onderwijs, <a href="/assets/Meldcode-huiselijk-geweld.pdf">een meldcode voor huiselijk geweld en kindermishandeling</a></p>
+  </article>
+  <%= render partial: '/common/aside' %>
+</main>

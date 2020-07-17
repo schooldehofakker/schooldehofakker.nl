@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'kracht-van-de-hofakker', to: 'kracht#index'
   get 'leraren', to: 'leraren#index'
   get 'vacatures', to: 'vacatures#index'
+  get 'contact', to: 'contact#index'
 
   match '/404', to: 'errors#not_found', via: :all
   match '/422', to: 'errors#unacceptable', via: :all
