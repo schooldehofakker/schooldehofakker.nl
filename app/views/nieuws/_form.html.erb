@@ -1,0 +1,44 @@
+<%= form_with model: news, url: new_nieuw_path do |form| %>
+  <% if news.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(news.errors.count, "error") %> prohibited this news from being saved:</h2>
+
+      <ul>
+      <% news.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+	<div class="form-group">
+		<%= form.label :title %>
+		<%= form.text_field :title, class: 'form-control' %>
+	</div>
+
+	<div class="form-group">
+		<%= form.label :content %>
+    <%= form.rich_text_area :content, class: 'form-control', data: { controller: "news", target: "news.content" } %>
+	</div>
+
+	<div class="form-group">
+    <%= form.label :status %>
+    <%= form.select :status, options_for_select(News::STATUS, params[:status]) %>
+	</div>
+
+	<div class="form-group">
+		<% if news.persisted? %>
+    	<div class="float-right">
+   			<%= link_to 'Destroy', nieuw_path, method: :delete, class: "btn btn-danger text-danger", data: { confirm: 'Are you sure?' } %>
+    	</div>
+		<% end %>
+
+		<%= form.submit class: 'btn btn-primary' %>
+
+		<% if news.persisted? %>
+    	<%= link_to "Cancel", nieuw_path, class: "btn btn-link" %>
+    <% else %>
+    	<%= link_to "Cancel", nieuw_path, class: "btn btn-link" %>
+    <% end %>
+	</div>
+<% end %>

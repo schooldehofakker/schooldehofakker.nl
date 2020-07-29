@@ -62,12 +62,12 @@
 
 		<header class="header">
 			<div class="container">
-        <%# <a class="logo" href="/"><img src="/assets/logos/logo.svg" alt="School de Hofakker logo"/></a> %>
         <%= link_to root_path do %>
           <%= image_tag "logo.svg", class: "logo", alt: "School de Hofakker logo" %>
         <% end %>
         <%= render partial: '/common/navigation' %>
-			</div>
+        <%= render partial: '/common/notices' %>
+    </div>
     </header>
     <%= yield %>
     <%= render partial: '/common/footer' %>

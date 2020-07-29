@@ -1,0 +1,38 @@
+<div class="feature" style="background-image: url(<%= asset_path 'banner_nieuws.jpg' %>) ">
+    <div class="container  typeset">
+    </div>
+</div>
+<main class="main  container">
+  <div class="content">
+    <article class="article  article--page  typeset">
+      <h1>Nieuws van de Hofakker</h1>
+    </article>
+    <section class="section  typeset">
+      <%= link_to new_nieuw_path(@news), class: 'btn btn-primary' do %>
+        <span class="glyphicon glyphicon-pencil"></span>
+        Nieuw
+      <% end %>
+    </section>
+    <section class="section  typeset">
+      <ul class="list  list--posts">
+        <%# a single post %>
+        <% if @allnews.empty? %>
+          Er zijn momenteel geen nieuwsberichten van de Hofakker
+        <% end %>
+        <% @allnews.each do |n| %>
+            <li class="item  item--post">
+              <article class="article  article--post">
+                <h2><%= link_to n.title, nieuw_path(n) %></h2>
+                <small class="small  post-meta">
+                  &nbsp;&middot;&nbsp;<time datetime="nieuws data time" class="time"><%= n.published_at.strftime("%d %B %Y")  %></time>
+                </small>
+                <p><%= n.content.to_plain_text.truncate(75, :omission => " ...") %></p>
+              </article>
+
+            </li>
+          <% end %>
+      </ul>
+    </section>
+  </div>
+  <%= render partial: '/common/aside' %>
+</main>
