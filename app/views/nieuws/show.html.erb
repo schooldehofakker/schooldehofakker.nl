@@ -7,9 +7,8 @@
   <article class="article  article--post  content  typeset">
     <h1><%= @news.title %></h1>
       <section class="section  typeset">
-        <%= link_to 'Nieuw', new_nieuw_path(@news), class: 'btn btn-primary' %>
         <%= link_to 'Bewerken', edit_nieuw_path(@news), class: 'btn btn-primary' %>
-        <%= link_to 'Verwijderen', nieuw_path(@news), method: :delete, class: 'btn btn-primary text-danger', data: { confirm: 'Are you sure?' } %>
+        <%= link_to 'Verwijderen', nieuw_path(@news), method: :delete, class: 'btn btn-primary text-danger', data: { confirm: 'Zeker weten?!' } %>
       </section>
     <small class="small  post-meta">
       &nbsp;&middot;&nbsp;<time datetime="<%= @news.created_at %>" class="time"><%= @news.published_at.strftime("%d %B %Y")  %></time>
