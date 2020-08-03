@@ -1,7 +1,7 @@
 # index page
 class NieuwsController < ApplicationController
   before_action :set_news, only: %i[show edit update destroy]
-  before_action :authenticate_admin!, only: %i[create edit update destroy]
+  before_action :authenticate_admin!, only: %i[create edit new update destroy]
 
   def index
     @allnews = News.all.where(status: 'published').order(published_at: :desc)

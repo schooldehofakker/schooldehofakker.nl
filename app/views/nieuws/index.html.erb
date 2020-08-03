@@ -7,12 +7,14 @@
     <article class="article  article--page  typeset">
       <h1>Nieuws van de Hofakker</h1>
     </article>
-    <section class="section  typeset">
-      <%= link_to new_nieuw_path(@news), class: 'btn btn-primary' do %>
-        <span class="glyphicon glyphicon-pencil"></span>
-        Nieuw
-      <% end %>
-    </section>
+    <% if current_user.admin? %>
+      <section class="section  typeset">
+        <%= link_to new_nieuw_path(@news), class: 'btn btn-primary' do %>
+          <span class="glyphicon glyphicon-pencil"></span>
+          Nieuw
+        <% end %>
+      </section>
+    <% end %>
     <section class="section  typeset">
       <ul class="list  list--posts">
         <%# a single post %>
