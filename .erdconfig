@@ -13,7 +13,7 @@ orientation: vertical
 polymorphism: true
 sort: true
 warn: true
-title: Ktsjing datamodel
+title: Datamodel website
 exclude: "ApplicationRecord, ActiveRecord::SchemaMigration, ActiveRecord::InternalMetadata"
 only: null
 only_recursion_depth: null
