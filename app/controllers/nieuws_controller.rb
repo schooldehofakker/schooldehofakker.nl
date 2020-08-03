@@ -1,6 +1,7 @@
 # index page
 class NieuwsController < ApplicationController
   before_action :set_news, only: %i[show edit update destroy]
+  before_action :authenticate_admin!, only: %i[create edit update destroy]
 
   def index
     @allnews = News.all.where(status: 'published').order(published_at: :desc)
@@ -43,6 +44,11 @@ class NieuwsController < ApplicationController
   end
 
   private
+
+  def authenticate_admin!
+    authenticate_user!
+    redirect_to nieuws_path unless current_user.admin?
+  end
 
   # Use callbacks to share common setup or constraints between actions.
   def set_news
