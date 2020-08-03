@@ -1,3 +1,19 @@
+# == Schema Information
+#
+# Table name: news
+#
+#  id           :bigint           not null, primary key
+#  published_at :datetime
+#  slug         :string
+#  status       :string
+#  title        :string
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#
+# Indexes
+#
+#  index_news_on_slug  (slug) UNIQUE
+#
 class News < ApplicationRecord
   self.implicit_order_column = :created_at
 

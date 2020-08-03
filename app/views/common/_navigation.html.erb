@@ -7,5 +7,10 @@
     <li class="item  item--nav"><a href="/nieuws/">Nieuws</a></li>
     <%# <li class="item  item--nav"><a href="/zoeken/">Zoeken</a></li> %>
 		<li class="item  item--nav"><a href="/contact/">Contact</a></li>
+    <% if user_signed_in? %>
+      <li class="item  item--nav"><%= link_to "Log uit", destroy_user_session_path, :method => :delete %></li>
+    <% else %>
+      <li class="item  item--nav"><%= link_to 'Log in', new_user_session_path %></li>
+    <% end %>
 	</ul>
 </nav>
