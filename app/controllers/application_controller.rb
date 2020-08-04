@@ -1,3 +1,4 @@
+# ApplicationController
 class ApplicationController < ActionController::Base
   def current_user
     @current_user ||= super || Guest.new
