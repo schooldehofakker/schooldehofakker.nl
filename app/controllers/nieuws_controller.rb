@@ -9,7 +9,9 @@ class NieuwsController < ApplicationController
 
   def edit; end
 
-  def show; end
+  def show
+    @othernews = News.all.where(status: 'published').where.not(id: @news.id).order(published_at: :desc)
+  end
 
   def new
     @news = News.new
