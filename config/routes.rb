@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root 'index#index'
 
+  get 'bedankt', to: 'bedankt#index'
   get 'contact', to: 'contact#index'
   post 'contact', to: 'contact#new'
   get 'kracht-van-de-hofakker', to: 'kracht#index'

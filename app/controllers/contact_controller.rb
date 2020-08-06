@@ -8,7 +8,7 @@ class ContactController < ApplicationController
     @message = contact_params[:message]
 
     ContactMailer.contact_email(@name, @email, @message).deliver_later
-    redirect_to root_path
+    redirect_to bedankt_path
   end
 
   private
