@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root 'index#index'
 
   get 'contact', to: 'contact#index'
+  post 'contact', to: 'contact#new'
   get 'kracht-van-de-hofakker', to: 'kracht#index'
   get 'leraren', to: 'leraren#index'
   resources 'nieuws'
