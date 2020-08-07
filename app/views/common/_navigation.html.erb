@@ -1,12 +1,11 @@
 <nav class="nav  nav--header">
-	<ul class="list  list--nav">
-		<li class="item  item--nav  item--current"><a href="/">Home</a></li>
-		<li class="item  item--nav"><a href="/kracht-van-de-hofakker/">Onze Kracht</a></li>
-		<li class="item  item--nav"><a href="/leraren/">Onze Leraren</a></li>
-		<li class="item  item--nav"><a href="/vacatures/">Vacatures</a></li>
-    <li class="item  item--nav"><a href="/nieuws/">Nieuws</a></li>
-    <%# <li class="item  item--nav"><a href="/zoeken/">Zoeken</a></li> %>
-		<li class="item  item--nav"><a href="/contact/">Contact</a></li>
+  <ul class="list  list--nav">
+    <li class="item  item--nav  <%= active_class(root_path) %>"><%= link_to "Home", root_path %></li>
+		<li class="item  item--nav  <%= active_class(kracht_van_de_hofakker_path) %>"><%= link_to "Onze Kracht", kracht_van_de_hofakker_path %></li>
+    <li class="item  item--nav  <%= active_class(leraren_path) %>"><%= link_to "Onze Leraren", leraren_path %></li>
+    <li class="item  item--nav  <%= active_class(vacatures_path) %>"><%= link_to "Vacatures", vacatures_path %></li>
+    <li class="item  item--nav  <%= active_class(nieuws_path) %>"><%= link_to "Nieuws", nieuws_path %></li>
+    <li class="item  item--nav  <%= active_class(contact_path) %>"><%= link_to "Contact", contact_path %></li>
     <% if user_signed_in? %>
       <li class="item  item--nav"><%= link_to "Log uit", destroy_user_session_path, :method => :delete %></li>
     <% else %>
