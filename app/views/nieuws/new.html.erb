@@ -42,7 +42,7 @@
        			<%= link_to 'Destroy', nieuw_path, method: :delete, class: "btn btn-danger text-danger", data: { confirm: 'Are you sure?' } %>
         	</div>
     		<% end %>
-    		<%= form.submit class: 'btn btn-primary' %>
+    		<%= form.submit "Opslaan", class: 'button btn btn-primary', style: "background: #77B82A" %>
     		<% if @news.persisted? %>
         	<%= link_to "Cancel", nieuw_path, class: "btn btn-link" %>
         <% else %>

@@ -8,8 +8,8 @@
     <h1><%= @news.title %></h1>
     <section class="section  typeset">
       <% if current_user.admin? %>
-        <%= link_to 'Bewerken', edit_nieuw_path(@news), class: 'btn btn-primary' %>
-        <%= link_to 'Verwijderen', nieuw_path(@news), method: :delete, class: 'btn btn-primary text-danger', data: { confirm: 'Zeker weten?!' } %>
+        <%= link_to 'Bewerken', edit_nieuw_path(@news), class: 'button btn btn-primary', style: "background: #77B82A" %>
+        <%= link_to 'Verwijderen', nieuw_path(@news), method: :delete, class: 'button btn btn-primary text-danger', data: { confirm: 'Zeker weten?!' }, style: "background: orange"%>
       <% end %>
       </section>
     <small class="small  post-meta">

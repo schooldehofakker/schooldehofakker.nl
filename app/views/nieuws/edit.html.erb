@@ -35,17 +35,10 @@
         <%= form.date_select :published_at, selected: Date.today %>
       </div>
       <div class="form-group">
+	    	<%= form.submit 'Opslaan', class: 'button btn btn-primary', style: "background: #77B82A" %>
 	    	<% if @news.persisted? %>
-        	<div class="float-right">
-       			<%= link_to 'Destroy', nieuw_path, method: :delete, class: "btn btn-danger text-danger", data: { confirm: 'Are you sure?' } %>
-        	</div>
+          <%= link_to 'Verwijderen', nieuw_path, method: :delete, class: "button btn btn-danger text-danger", data: { confirm: 'Are you sure?' }, style: "background: orange" %>
 	    	<% end %>
-	    	<%= form.submit class: 'btn btn-primary' %>
-	    	<% if @news.persisted? %>
-        	<%= link_to "Cancel", nieuw_path, class: "btn btn-link" %>
-        <% else %>
-        	<%= link_to "Cancel", nieuw_path, class: "btn btn-link" %>
-        <% end %>
 	    </div>
     <% end %>
   </div>

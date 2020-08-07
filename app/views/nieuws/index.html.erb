@@ -9,7 +9,7 @@
     </article>
     <% if current_user.admin? %>
       <section class="section  typeset">
-        <%= link_to new_nieuw_path(@news), class: 'btn btn-primary' do %>
+        <%= link_to new_nieuw_path(@news), class: 'button btn btn-primary', style: "background: #77B82A" do %>
           <span class="glyphicon glyphicon-pencil"></span>
           Nieuw
         <% end %>
