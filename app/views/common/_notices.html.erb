@@ -1,6 +1,5 @@
-<%# <% flash.each do |msg_type, message| %1> %>
-<%#   <div class="alert <%= bootstrap_class_for(msg_type) %1>"> %>
-<%#       <button class="close" aria-label="Close" data-dismiss="alert"><span>×</span></button> %>
-<%#       <%= message %1> %>
-<%#   </div> %>
-<%# <% end %1> %>
+<div class="alert" >
+  <% flash.each do |type, msg| %>
+    <%= msg %> 
+  <% end %>
+</div>

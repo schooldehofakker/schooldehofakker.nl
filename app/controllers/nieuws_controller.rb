@@ -21,7 +21,7 @@ class NieuwsController < ApplicationController
     @news = News.new(post_params)
 
     if @news.save
-      redirect_to nieuw_path(@news), notice: 'Nieuws is bijgewerkt.'
+      redirect_to nieuw_path(@news), notice: 'Nieuws is aangemaakt ...'
     else
       render :new
     end
@@ -32,7 +32,7 @@ class NieuwsController < ApplicationController
   def update
     pd = Date.new(params[:news]['published_at(1i)'].to_i, params[:news]['published_at(2i)'].to_i, params[:news]['published_at(3i)'].to_i)
     if @news.update(title: post_params[:title], content: post_params[:content], status: post_params[:status], published_at: pd)
-      redirect_to nieuw_path(@news), notice: 'Nieuws is bijgewerkt.'
+      redirect_to nieuw_path(@news), notice: 'Nieuws is bijgewerkt ...'
     else
       render :edit
     end
@@ -42,7 +42,7 @@ class NieuwsController < ApplicationController
   # DELETE /posts/1.json
   def destroy
     @news.destroy
-    redirect_to nieuws_url, notice: 'Nieuws is verwijderd.'
+    redirect_to nieuws_url, notice: 'Nieuws is verwijderd ...'
   end
 
   private
