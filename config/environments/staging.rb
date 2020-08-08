@@ -61,12 +61,12 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "schooldehofakker_nl_production"
 
   config.action_mailer.perform_caching = false
-  config.action_mailer.default_url_options = { host: 'schooldehofakker.nl', port: 443 }
+  config.action_mailer.default_url_options = { host: 'hofakker-staging.herokuapp.com', port: 443 }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     address: Rails.application.credentials.smtp[:server],
     port: Rails.application.credentials.smtp[:port],
-    domain: 'schooldehofakker.nl',
+    domain: 'hofakker-staging.herokuapp.com',
     user_name: Rails.application.credentials.smtp[:user_name],
     password: Rails.application.credentials.smtp[:password],
     authentication: 'login',
