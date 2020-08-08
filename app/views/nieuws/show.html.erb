@@ -1,0 +1,23 @@
+<div class="feature" style="background-image: url(<%= asset_path 'banner_nieuws.jpg' %>) ">
+    <div class="container  typeset">
+    </div>
+</div>
+<main class="main  container">
+  <div class="content">
+  <article class="article  article--post  typeset">
+    <h1><%= @news.title %></h1>
+    <section class="section  typeset">
+      <% if current_user.admin? %>
+        <%= link_to 'Bewerken', edit_nieuw_path(@news), class: 'button btn btn-primary', style: "background: #77B82A" %>
+        <%= link_to 'Verwijderen', nieuw_path(@news), method: :delete, class: 'button btn btn-primary text-danger', data: { confirm: 'Zeker weten?!' }, style: "background: orange"%>
+      <% end %>
+      </section>
+    <small class="small  post-meta">
+      &nbsp;&middot;&nbsp;<time datetime="<%= @news.created_at %>" class="time"><%= @news.published_at.strftime("%d %B %Y")  %></time>
+    </small>
+    <%= @news.content %>
+    <%= render partial: '/common/share' %>
+  </article>
+  </div>
+  <%= render partial: '/nieuws/aside' %>
+</main>

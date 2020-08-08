@@ -1,0 +1,20 @@
+<main class="main  container">
+  <div class="content">
+  <article class="article  article--post  typeset">
+    <h1>Wachtwoord vergeten?</h1>
+    <section class="section  typeset">
+      <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+        <%= render "devise/shared/error_messages", resource: resource %>
+        <div class="field">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+        </div>
+        <div class="actions">
+          <%= f.submit "Stuur me wachtwoord reset instructies" %>
+        </div>
+      <% end %>
+      <%= render "devise/shared/links" %>
+    </section>
+  </article>
+  </div>
+</main>

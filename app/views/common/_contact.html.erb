@@ -1,0 +1,20 @@
+<%= form_with url: contact_path, local: true, method: :post do |form| %>
+  <div class="form-group">
+    <%= form.label 'Je naam: ' %>
+    <%= form.label '*', class: 'required' %>
+    <%= form.text_field :name, class: 'form-control' , placeholder: 'Je naam', required: 'required' %>
+  </div>
+  <div class="form-group">
+    <%= form.label 'Je email adres:' %>
+    <%= form.label '*', class: 'required' %>
+    <%= form.text_field :email, class: 'form-control', placeholder: 'email@website.com', required: 'required' %>
+  </div>
+  <div class="form-group">
+    <%= form.label 'Je bericht:' %>
+    <%= form.label '*', class: 'required' %>
+    <%= form.text_area :message, class: 'form-control', placeholder: 'Je bericht', required: 'required' %>
+  </div>    <%= submit_tag "Verstuur bericht" %>
+  <br />
+  <small class="small"><span class="required">*</span> geeft aan dat het een verplicht veld is</small>
+<% end %>
+

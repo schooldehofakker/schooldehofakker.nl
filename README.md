@@ -1,96 +1,28 @@
-![Jekyll Deploy](https://github.com/schooldehofakker/schooldehofakker.nl/workflows/Jekyll%20Deploy/badge.svg?branch=master)
-[![GitHub issues](https://img.shields.io/github/issues/schooldehofakker/schooldehofakker.nl)](https://github.com/schooldehofakker/schooldehofakker.nl/issues)
-[![GitHub forks](https://img.shields.io/github/forks/schooldehofakker/schooldehofakker.nl)](https://github.com/schooldehofakker/schooldehofakker.nl/network)
-[![GitHub stars](https://img.shields.io/github/stars/schooldehofakker/schooldehofakker.nl)](https://github.com/schooldehofakker/schooldehofakker.nl/stargazers)
-[![GitHub license](https://img.shields.io/github/license/schooldehofakker/schooldehofakker.nl)](https://github.com/schooldehofakker/schooldehofakker.nl/blob/master/LICENSE)
+# README
 
-# schooldehofakker.nl
+## Data model
 
-Publieke website van [School de Hofakker](https://schooldehofakker.nl)
+![Erd](erd.png)
 
-## beheren van de website
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-Deze website is gemaakt met een statische website generator genaamd [jekyll](https://jekyllrb.com/). Dit klinkt
-spannender dan het is, wat een generator doet is simpele tekst bestanden geschreven in een [bepaald formaat](https://guides.github.com/features/mastering-markdown/) omzetten in html, de structuur waar alle 
-websites op het internet op gebouwd zijn.
+Things you may want to cover:
 
-Hier een voorbeeld van de voorpagina van de Hofakker:
+* Ruby version
 
-```
-    ---
-    title: Over de school
-    feature_text: |
-    feature_image: "/assets/banner_voorzijde_school.jpg"
-    excerpt: "De Hofakker is een school waar kinderen met rode wangen en lichtjes in hun ogen uit school komen. De lessen worden zo ingericht dat het kind zichzelf kan verbinden met de wereld om hem of haar heen en tegelijkertijd het eigen levensdoel trouw kan blijven. Buiten zijn wordt afgewisseld met binnen zitten, om aan de natuurlijke behoefte van bewegen tegemoet te komen. Van buiten zijn en bewegen krijg je weer nieuwe energie! "
-    aside: true
-    ---
-    De Hofakker is een school waar kinderen met rode wangen en lichtjes in hun ogen uit school komen. De lessen worden zo ingericht dat het kind zichzelf kan verbinden met de wereld om hem of haar heen en tegelijkertijd het eigen levensdoel trouw kan blijven. Buiten zijn wordt afgewisseld met binnen zitten, om aan de natuurlijke behoefte van bewegen tegemoet te komen. Van buiten zijn en bewegen krijg je weer nieuwe energie!
-```
+* System dependencies
 
-De generator kan dan die tekst omzetten in:
+* Configuration
 
-![Alt text](assets/instructies/0-index.png "Index pagina")
+* Database creation
 
-De vormgeving eromheen is gebasseerd op een template genaamd [Alembic](https://jekyllthemes.io/theme/alembic).
+* Database initialization
 
-Het genereren en omzetten is geautomatiseerd, en gebeurt [automatisch bij iedere wijziging](https://github.com/schooldehofakker/schooldehofakker.nl/actions) 
-die opgeslagen wordt via dit [configuratie bestand](https://github.com/schooldehofakker/schooldehofakker.nl/blob/master/.github/workflows/main.yml).
+* How to run the test suite
 
-Pagina's kunnen op verschillende manieren bewerkt worden:
+* Services (job queues, cache servers, search engines, etc.)
 
-### Optie 1, via een Content Management tool: Forestry.io
+* Deployment instructions
 
-Forestry is een tool die de bestanden van de website vanuit github kan inlezen en daar een grafische schil omheen kan maken 
-waardoor je direct vanuit de browser content wijzigingen kan doorvoeren, maar zonder aan de misschien complexere 
-Markdown of structuur van de site blootgesteld te worden.
-
-Om met Forestry aan de slag te gaan moet je eerst inloggen op [https://app.forestry.io/login](https://app.forestry.io/login).
-Gebruik daarvoor je github inlog:
-
-![Alt text](assets/instructies/1-forestry-inlog.png "Login op forestry")
-
-Selecteer de Hofakker:
-
-![Alt text](assets/instructies/2-forestry-selecteer-site.png "Selecteer de site")
-
-Je komt dan in het volgende overzicht:
-
-![Alt text](assets/instructies/3-forestry-overzicht.png "Overzicht")
-
-Momenteel zijn 2 typen content ondersteund, pagina of `Pages`:
-
-![Alt text](assets/instructies/4-forestry-pages.png "Pages")
-
-En de collectie Nieuwsberichten of `Posts`
-
-![Alt text](assets/instructies/6-forestry-posts.png "Posts")
-
-Je kan een nieuw Nieuwsbericht aanmaken:
-
-![Alt text](assets/instructies/5-forestry-post-nieuw.png "Post nieuw")
-
-Of bestaande berichten aanpassen:
-
-![Alt text](assets/instructies/7-forestry-post-bijwerken.png "Post bewerken")
-
-Afbeeldingen kunnen toegevoegd worden onder Media.
-
-![Alt text](assets/instructies/8-forestry-media.png "Media toevoegen")
-
-### Optie 2, via github.com
-
-door een nieuw bestand te maken:
-
-![Alt text](assets/instructies/1-github-create-file.png "Maak bestand aan")
-
-of door een bestaand bestand te bewerken:
-
-![Alt text](assets/instructies/2-github-edit-file.png "Pas een bestand aan")
-
-Dit kan lastig zijn, en is niet voor iedereen weggelegd, daarom is het handiger om een Content Management Tool te gebruiken:
-
-> Forestry wordt geadviseerd te gebruiken, github misschien handiger wanneer je snel een wijziging wil doen
-
-## Het kleurenpalet
-
-![Alt text](kleurpalet.png "kleurenpalet")
+* ...

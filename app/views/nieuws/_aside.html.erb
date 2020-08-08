@@ -1,0 +1,22 @@
+<aside class="aside  typeset  aside--right">
+  <section class="section  section--related-posts">
+    <h3>Overige berichten</h3>
+    <% if @othernews.empty? %>
+      Er zijn momenteel geen andere nieuwsberichten van de Hofakker
+    <% else %>
+        <% @othernews.each do |n| %>
+          <ul class="list  list--posts">
+            <li class="item  item--post">
+              <article class="article  article--post  typeset">
+                <h4><%= link_to n.title, nieuw_path(n) %></h4>
+                <small class="small  post-meta">
+                  &nbsp;&middot;&nbsp;<time datetime="2020-05-15T00:00:00+02:00" class="time"><%= n.published_at.strftime("%d %B %Y")  %></time>
+                </small>
+                <p><%= n.content.to_plain_text.truncate(75, :omission => " ...") %></p>
+              </article>
+            </li>
+          <% end %>
+          </ul>
+        <% end %>
+  </section>
+</aside>
