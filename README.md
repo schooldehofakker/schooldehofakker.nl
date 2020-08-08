@@ -1,6 +1,8 @@
 # schooldehofakker.nl
 Publieke website van School de Hofakker
 
+![Screenshot van de website](website.png)
+
 
 ![Ci](https://github.com/schooldehofakker/schooldehofakker.nl/workflows/Ci/badge.svg?branch=develop)
 [![GitHub issues open](https://img.shields.io/github/issues/network-tools/shconfparser.svg)](https://github.com/schooldehofakker/schooldehofakker.nl/issues)
