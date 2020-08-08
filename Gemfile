@@ -41,6 +41,7 @@ end
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 # Added for this project
+gem 'aws-sdk-s3', require: false
 gem 'devise' # Devise is a flexible authentication solution for Rails based on Warden
 gem 'friendly_id' # FriendlyId is the "Swiss Army bulldozer" of slugging and permalink plugins for Active Record.
 gem 'image_processing', '~> 1.2' # Use Active Storage variant
