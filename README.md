@@ -3,6 +3,7 @@ Publieke website van School de Hofakker
 
 
 ![Ci](https://github.com/schooldehofakker/schooldehofakker.nl/workflows/Ci/badge.svg?branch=develop)
+[![GitHub issues open](https://img.shields.io/github/issues/network-tools/shconfparser.svg)](https://github.com/schooldehofakker/schooldehofakker.nl/issues)
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=schooldehofakker/schooldehofakker.nl&identifier=176970982)](https://dependabot.com)
 <a href="https://www.ruby-lang.org/en/">
     <img src="https://img.shields.io/badge/Ruby-v2.6.6-brightgreen.svg" alt="ruby version">
