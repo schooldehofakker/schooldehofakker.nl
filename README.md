@@ -1,28 +1,57 @@
-# README
+# schooldehofakker.nl
+Publieke website van School de Hofakker
 
+
+![Ci](https://github.com/schooldehofakker/schooldehofakker.nl/workflows/Ci/badge.svg?branch=develop)
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=schooldehofakker/schooldehofakker.nl&identifier=176970982)](https://dependabot.com)
+<a href="https://www.ruby-lang.org/en/">
+    <img src="https://img.shields.io/badge/Ruby-v2.6.6-brightgreen.svg" alt="ruby version">
+  </a>
+  <a href="http://rubyonrails.org/">
+    <img src="https://img.shields.io/badge/Rails-v6.0.3-brightgreen.svg" alt="rails version">
+  </a>
+  
 ## Data model
 
 ![Erd](erd.png)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Getting started
+- Install [dip](https://github.com/bibendi/dip)
+- Install [docker](https://docs.docker.com/install/)
+- Install [docker-compose](https://docs.docker.com/compose/install/)
 
-Things you may want to cover:
+## Contributing
 
-* Ruby version
+We encourage you to contribute to schooldehofakker.nl! Please check out the
+[Contributing to schooldehofakker guide](CONTRIBUTING.md) for guidelines about how to proceed.
 
-* System dependencies
+## Checkout the code
+``` shell
+git clone https://github.com/schooldehofakker/schooldehofakker.nl.git
+cd schooldehofakker.nl
+dip provision
+dip rails s
+dip rubocop
+dip rspec
+```
 
-* Configuration
+## Deploy
+Once you're ready to deploy to [Heroku](https://www.heroku.com), run:
 
-* Database creation
+``` shell
+heroku apps:create
+heroku buildpacks:add heroku/ruby --index 2
+git push heroku master
+heroku run rake db:seed
+heroku open
+```
 
-* Database initialization
+Or you can click this button to deploy straight to Heroku from this repository:
 
-* How to run the test suite
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-* Services (job queues, cache servers, search engines, etc.)
+Success, live long and prosper!
 
-* Deployment instructions
+## Suggestions, problems, typos?
 
-* ...
+Get in touch by adding an [issue](https://github.com/schooldehofakker/schooldehofakker.nl/issues).
