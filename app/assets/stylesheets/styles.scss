@@ -2201,5 +2201,13 @@ pre code {
 
 .alert {
   color: #ffa500;
+  background: #8ab43d;
+}
+
+/* Inserting this collapsed row between two flex items will make 
+ * the flex item that comes after it break to a new row */
+.break {
+  flex-basis: 100%;
+  height: 0;
 }
 
