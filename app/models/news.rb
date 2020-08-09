@@ -3,10 +3,10 @@
 # Table name: news
 #
 #  id           :bigint           not null, primary key
-#  published_at :datetime
-#  slug         :string
-#  status       :string
-#  title        :string
+#  published_at :datetime         not null
+#  slug         :string           not null
+#  status       :string           not null
+#  title        :string           not null
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
 #
@@ -26,6 +26,7 @@ class News < ApplicationRecord
 
   validates :title, presence: true, length: { minimum: 5 }
   validates :content, presence: true
+  validates :slug, presence: true
   validates :status, presence: true
   validates :published_at, presence: true
 
