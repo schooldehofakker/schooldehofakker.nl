@@ -17,13 +17,6 @@ gem 'webpacker', '~> 5.1' # Transpile app-like JavaScript. Read more: https://gi
 group :development, :test do
   gem 'brakeman'
   gem 'byebug', platforms: %i[mri mingw x64_mingw] # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'rspec-core'
-  gem 'rspec-expectations'
-  gem 'rspec-mocks'
-  gem 'rspec-rails' # Rspec-rails brings the RSpec testing framework to Ruby on Rails as a drop-in alternative to its default testing framework, Minitest.
-  gem 'rspec-support'
-  gem 'rubocop', require: false
-  gem 'shoulda-matchers'
 end
 
 group :development do
@@ -38,7 +31,14 @@ end
 
 group :test do
   gem 'capybara', '>= 2.15' # Adds support for Capybara system testing and selenium driver
+  gem 'rspec-core'
+  gem 'rspec-expectations'
+  gem 'rspec-mocks'
+  gem 'rspec-rails' # Rspec-rails brings the RSpec testing framework to Ruby on Rails as a drop-in alternative to its default testing framework, Minitest.
+  gem 'rspec-support'
+  gem 'rubocop', require: false
   gem 'selenium-webdriver'
+  gem 'shoulda-matchers', '~> 4.0'
   gem 'simplecov'
   gem 'webdrivers' # Easy installation and use of web drivers to run system tests with browsers
 end
@@ -51,6 +51,3 @@ gem 'aws-sdk-s3', require: false
 gem 'devise' # Devise is a flexible authentication solution for Rails based on Warden
 gem 'friendly_id' # FriendlyId is the "Swiss Army bulldozer" of slugging and permalink plugins for Active Record.
 gem 'image_processing', '~> 1.2' # Use Active Storage variant
-# gem 'omniauth-facebook'
-# gem 'omniauth-github'
-# gem 'omniauth-google-oauth2'
