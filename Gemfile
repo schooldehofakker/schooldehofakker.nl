@@ -17,7 +17,11 @@ gem 'webpacker', '~> 5.1' # Transpile app-like JavaScript. Read more: https://gi
 group :development, :test do
   gem 'brakeman'
   gem 'byebug', platforms: %i[mri mingw x64_mingw] # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'rspec-rails', '~> 4.0.0' # Rspec-rails brings the RSpec testing framework to Ruby on Rails as a drop-in alternative to its default testing framework, Minitest.
+  gem 'rspec-core'
+  gem 'rspec-expectations'
+  gem 'rspec-mocks'
+  gem 'rspec-rails' # Rspec-rails brings the RSpec testing framework to Ruby on Rails as a drop-in alternative to its default testing framework, Minitest.
+  gem 'rspec-support'
   gem 'rubocop', require: false
   gem 'shoulda-matchers'
 end

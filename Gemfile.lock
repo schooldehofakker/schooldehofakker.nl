@@ -309,7 +309,11 @@ DEPENDENCIES
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.2)
   rails-erd
-  rspec-rails (~> 4.0.0)
+  rspec-core
+  rspec-expectations
+  rspec-mocks
+  rspec-rails
+  rspec-support
   rubocop
   sass-rails (>= 6)
   selenium-webdriver
