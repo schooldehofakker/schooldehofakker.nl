@@ -55,7 +55,7 @@ services:
 
   rails:
     <<: *backend
-    command: bundle exec rails server -b 0.0.0.0
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     ports:
       - '3000:3000'
 
@@ -69,6 +69,13 @@ services:
       - .dockerdev/.psqlrc:/root/.psqlrc:ro
       - postgres:/var/lib/postgresql/data
       - ./log:/root/log:cached
+      # This copies our init.sql into our container, to
+      # a special file called
+      # /docker-entrypoint-initdb.d/init.sql. Anything
+      # at this location will get executed one per
+      # container, i.e. it will get executed the first
+      # time the container is created but not again.
+      - ./.dockerdev/init.sql:/docker-entrypoint-initdb.d/init.sql
     environment:
       PSQL_HISTFILE: /root/log/.psql_history
     ports:
