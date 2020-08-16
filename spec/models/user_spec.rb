@@ -22,5 +22,20 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it {
+    expect(subject).to respond_to :admin, :email, :encrypted_password,
+                                  :first_name, :last_name, :remember_created_at, :reset_password_sent_at,
+                                  :reset_password_token
+  }
+
+  it {
+    is_expected.to have_db_column(:admin).of_type(:boolean).with_options(null: false)
+    is_expected.to have_db_column(:email).of_type(:string).with_options(null: false)
+    is_expected.to have_db_column(:encrypted_password).of_type(:string).with_options(null: false)
+    is_expected.to have_db_column(:first_name).of_type(:string)
+    is_expected.to have_db_column(:last_name).of_type(:string)
+    is_expected.to have_db_column(:remember_created_at).of_type(:datetime)
+    is_expected.to have_db_column(:reset_password_sent_at).of_type(:datetime)
+    is_expected.to have_db_column(:reset_password_token).of_type(:string)
+  }
 end
