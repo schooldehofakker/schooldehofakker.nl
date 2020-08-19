@@ -37,7 +37,7 @@
       <div class="form-group">
 	    	<%= form.submit 'Opslaan', class: 'button btn btn-primary', style: "background: #77B82A" %>
 	    	<% if @news.persisted? %>
-          <%= link_to 'Verwijderen', nieuw_path, method: :delete, class: "button btn btn-danger text-danger", data: { confirm: 'Are you sure?' }, style: "background: orange" %>
+          <%= link_to 'Verwijderen', nieuw_path, method: :delete, class: "button btn btn-danger text-danger", data: { confirm: 'Are you sure?' }, style: "background: red" %>
 	    	<% end %>
 	    </div>
     <% end %>
