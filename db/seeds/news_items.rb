@@ -1,5 +1,3 @@
-require 'faker'
-
 module Seeds
   module NewsItems
     def self.included(_modul)
@@ -11,6 +9,7 @@ module Seeds
         # seed all except development and staging, nothing else
         return unless Rails.env.development? || Rails.env.staging?
 
+        require 'faker'
         News.destroy_all
         25.times do |_row|
           title = Faker::Lorem.sentence

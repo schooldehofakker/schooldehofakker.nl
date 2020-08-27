@@ -19,7 +19,7 @@ group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw] # Call 'byebug' anywhere in the code to stop execution and get a debugger console
 end
 
-group :development, :staging do
+group :development, :staging, :test do
   gem 'faker'
 end
 group :development do
