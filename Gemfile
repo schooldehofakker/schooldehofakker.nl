@@ -43,7 +43,7 @@ group :test do
   gem 'rspec-support'
   gem 'rubocop', require: false
   gem 'selenium-webdriver'
-  gem 'shoulda-matchers', '~> 4.0'
+  gem 'shoulda-matchers', '~> 4.4'
   gem 'simplecov'
   gem 'webdrivers' # Easy installation and use of web drivers to run system tests with browsers
 end
