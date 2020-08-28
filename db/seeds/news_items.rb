@@ -6,7 +6,7 @@ module Seeds
 
     class_eval do
       def do_seed
-        # seed all except development and staging, nothing else
+        # seed development and staging, nothing else
         return unless Rails.env.development? || Rails.env.staging?
 
         require 'faker'
