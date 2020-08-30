@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get 'kracht-van-de-hofakker', to: 'kracht#index'
   get 'leraren', to: 'leraren#index'
   resources 'nieuws'
-  post '/nieuws/new', to: 'nieuws#create'
+  get '/nieuws/:slug', to: 'nieuws#show'
   get 'vacatures', to: 'vacatures#index'
 
   match '/404', to: 'errors#not_found', via: :all

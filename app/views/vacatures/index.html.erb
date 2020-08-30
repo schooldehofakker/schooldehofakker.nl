@@ -10,6 +10,9 @@
     <% if vacatures.empty? %>
       Er zijn momenteel geen vacatures op de Hofakker
     <% end %>
+    <% if !vacatures.empty? %>
+      Momenteel zijn er <%= vacatures.size %> vacatures:
+    <% end %>
     <% vacatures.each do |v| %>
       <h3><%= v.titel %></h3>
       <%= @renderer.render(v.content).html_safe %>

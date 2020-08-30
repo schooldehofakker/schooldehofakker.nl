@@ -11,7 +11,7 @@
         <h3><%= "#{l.voornaam} #{l.achternaam}" %></h3>
         <i></i>
         <figure class="figure  figure--right">
-          <img class="image" src="<%= l.foto.url %>" alt="<%= l.functie %>" width="300" height="800" />
+          <img class="image" src="<%= l.foto.url(width: 300, height: 300, format: 'jpg', quality: 100) %>" alt="<%= l.functie %>" width="300" height="800" />
           <figcaption class="caption"><%= l.functie %> </br> (<%= l.werkdagen %>)</figcaption>
         </figure>
         <%= @renderer.render(l.content).html_safe %>

@@ -5,18 +5,13 @@
 <main class="main  container">
   <div class="content">
   <article class="article  article--post  typeset">
-    <h1><%= @news.title %></h1>
+    <h1><%= @news.titel %></h1>
     <section class="section  typeset">
-      <% if current_user.admin? %>
-        <%= link_to 'Nieuw', new_nieuw_path(@news), class: 'button btn btn-primary', style: "background: #77B82A" %>
-        <%= link_to 'Bewerken', edit_nieuw_path(@news), class: 'button btn btn-primary', style: "background: orange" %>
-        <%= link_to 'Verwijderen', nieuw_path(@news), method: :delete, class: 'button btn btn-primary text-danger', data: { confirm: 'Zeker weten?!' }, style: "background: red"%>
-      <% end %>
       </section>
     <small class="small  post-meta">
-      &nbsp;&middot;&nbsp;<time datetime="<%= @news.created_at %>" class="time"><%= @news.published_at.strftime("%d %B %Y")  %></time>
+      &nbsp;&middot;&nbsp;<time datetime="<%= @news.published %>" class="time"><%= @news.published.strftime("%d %B %Y")  %></time>
     </small>
-    <%= @news.content %>
+    <%= @renderer.render(@news.content).html_safe %>
     <%= render partial: '/common/share' %>
   </article>
   </div>
