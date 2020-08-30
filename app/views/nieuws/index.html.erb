@@ -7,30 +7,21 @@
     <article class="article  article--page  typeset">
       <h1>Nieuws van de Hofakker</h1>
     </article>
-    <% if current_user.admin? %>
-      <section class="section  typeset">
-        <%= link_to new_nieuw_path(@news), class: 'button btn btn-primary', style: "background: #77B82A" do %>
-          <span class="glyphicon glyphicon-pencil"></span>
-          Nieuw
-        <% end %>
-      </section>
-    <% end %>
     <section class="section  typeset">
       <ul class="list  list--posts">
-        <%# a single post %>
-        <% if @allnews.empty? %>
+        <% nieuws = @content.entries(content_type:'nieuws', order: '-fields.published') %>
+        <% if nieuws.empty? %>
           Er zijn momenteel geen nieuwsberichten van de Hofakker
         <% end %>
-        <% @allnews.each do |n| %>
+        <% nieuws.each do |n| %>
             <li class="item  item--post">
               <article class="article  article--post">
-                <h2><%= link_to n.title, nieuw_path(n) %></h2>
+                <h2><%= link_to n.titel, nieuw_path(n.slug) %></h2>
                 <small class="small  post-meta">
-                  &nbsp;&middot;&nbsp;<time datetime="nieuws data time" class="time"><%= n.published_at.strftime("%d %B %Y")  %></time>
+                  &nbsp;&middot;&nbsp;<time datetime="nieuws data time" class="time"><%= n.published.strftime("%d %B %Y")  %></time>
                 </small>
-                <p><%= n.content.to_plain_text.truncate(75, :omission => " ...") %></p>
+                <p><%= n.beschrijving %></p>
               </article>
-
             </li>
           <% end %>
       </ul>

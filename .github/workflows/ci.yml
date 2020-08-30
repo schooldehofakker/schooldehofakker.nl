@@ -36,32 +36,32 @@ jobs:
           gem install bundler
           bundle install
 
-      - name: Run ruby code linter (Rubocop)
-        run: bin/rubocop
+      # - name: Run ruby code linter (Rubocop)
+      #   run: bin/rubocop
 
       - name: Run vulnerability scanner (Brakeman)
         run: bin/brakeman -q -w2
 
-      - name: Install dependencies
-        run: |
-          # fix: Unable to fetch some archives
-          sudo apt-get update
-          sudo apt-get -yqq install libpq-dev chromium-chromedriver
-          yarn install
+      # - name: Install dependencies
+      #   run: |
+      #     # fix: Unable to fetch some archives
+      #     sudo apt-get update
+      #     sudo apt-get -yqq install libpq-dev chromium-chromedriver
+      #     yarn install
 
-      - name: Setup test database
-        env:
-          RAILS_ENV: test
-          DATABASE_URL: postgres://postgres@localhost:5432/hofakker_test
-        run: |
-          bin/rails db:create
-          bin/rails db:migrate
+      # - name: Setup test database
+      #   env:
+      #     RAILS_ENV: test
+      #     DATABASE_URL: postgres://postgres@localhost:5432/hofakker_test
+      #   run: |
+      #     bin/rails db:create
+      #     bin/rails db:migrate
 
-      - name: Run testsuite (Rspec)
-        env:
-          RAILS_ENV: test
-          DATABASE_URL: postgres://postgres@localhost:5432/hofakker_test
-        run: bin/rspec
+      # - name: Run testsuite (Rspec)
+      #   env:
+      #     RAILS_ENV: test
+      #     DATABASE_URL: postgres://postgres@localhost:5432/hofakker_test
+      #   run: bin/rspec
 
       - name: Deploy to staging environment
         if: github.ref == 'refs/heads/develop' && job.status == 'success'
