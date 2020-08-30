@@ -3,24 +3,23 @@
     </div>
 </div>
 <main class="main  container">
-  <article class="article  article--page  content  typeset">
-    <h1>Vacatures</h1>
-    <blockquote>
-      <p>Momenteel hebben we 2 vacatures</p>
-    </blockquote>
-    <h4 id="leerkracht-voor-onderbouw">Leerkracht voor onderbouw</h4>
-    <p>Onze kleinschalige school in het buitengebied van Vorden zoekt een enthousiaste Vrije school leerkracht.</p>
-    <p>Er is een vacature voor 2 dagen en je zal gaan samenwerken met de huidige 2 leerkrachten in klas 1-6.</p>
-    <p>Met groeimogelijkheden om naar wens meer dagen te gaan werken.</p>
-    <p>Steekwoorden: kleinschaligheid, verbinding met de natuur, onderwijsvernieuwend, dieren, buitenzijn, vrijheid van onderwijs.</p>
-    <p>Spreekt dit je aan en wil je meer weten?</p>
-    <p>Wij komen graag met je in gesprek.</p>
-    <h4 id="inval-leerkracht-kleuterklas-de-hofakker">Inval leerkracht kleuterklas de Hofakker</h4>
-    <p>Voor onze kleine kleuterklas van ca. 12 kinderen zijn wij op zoek naar een enthousiaste inval leerkracht.</p>
-    <p>Wij zoeken een Vrije school leerkracht met kleuterspecialisatie die bereid is om bij ziekte en afwezigheid in te vallen. De huidige kleuterleerkracht heeft soms vanwege studie een invaller nodig.</p>
-    <p>Wij bieden een geweldige kans om in vrijheid van onderwijs te werken op een prachtige buitenlocatie. De kleuterklas is vaak in het bos, en de klas is gehuisvest in een prachtig schuurtje.</p>
-    <p>Graag komen wij in contact met mensen die hier blij van worden.</p>
+<article class="article  article--page  content  typeset">
+  <h1>Vacatures</h1>
+  <ul class="list  list--posts">
+    <% vacatures = @content.entries(content_type:'vacatures', include: 2)%>
+    <% if vacatures.empty? %>
+      Er zijn momenteel geen vacatures op de Hofakker
+    <% end %>
+    <% vacatures.each do |v| %>
+      <h3><%= v.titel %></h3>
+      <%= @renderer.render(v.content).html_safe %>
+    <% end %>
+  </ul>
+  </section>
+  <% if !vacatures.empty? %>
+    <h2>Contact</h2>
     <%= render partial: '/common/contact' %>
-  </article>  
+  <% end %>
+ </article>
   <%= render partial: '/common/aside' %>
 </main>
