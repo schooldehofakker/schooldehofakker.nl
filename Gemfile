@@ -19,6 +19,9 @@ group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw] # Call 'byebug' anywhere in the code to stop execution and get a debugger console
 end
 
+group :development, :staging, :test do
+  gem 'faker'
+end
 group :development do
   gem 'annotate'
   gem 'listen', '~> 3.2'
@@ -32,7 +35,6 @@ end
 group :test do
   gem 'capybara', '>= 2.15' # Adds support for Capybara system testing and selenium driver
   gem 'factory_bot_rails'
-  gem 'faker'
   gem 'rails-controller-testing'
   gem 'rspec-core'
   gem 'rspec-expectations'
@@ -41,7 +43,7 @@ group :test do
   gem 'rspec-support'
   gem 'rubocop', require: false
   gem 'selenium-webdriver'
-  gem 'shoulda-matchers', '~> 4.0'
+  gem 'shoulda-matchers', '~> 4.4'
   gem 'simplecov'
   gem 'webdrivers' # Easy installation and use of web drivers to run system tests with browsers
 end
