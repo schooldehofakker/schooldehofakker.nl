@@ -1,6 +1,5 @@
 # index page
 class NieuwsController < ApplicationController
-
   def index; end
 
   def show
