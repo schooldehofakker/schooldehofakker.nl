@@ -10,7 +10,7 @@
             <article class="article  article--post  typeset">
               <h4><%= link_to n.titel, nieuw_path(n.slug) %></h4>
               <small class="small  post-meta">
-                &nbsp;&middot;&nbsp;<time datetime="2020-05-15T00:00:00+02:00" class="time"><%= n.published.strftime("%d %B %Y")  %></time>
+                &nbsp;&middot;&nbsp;<time datetime="<%= n.published %>" class="time"><%= n.published.strftime("%d %B %Y")  %></time>
               </small>
               <p><%= n.beschrijving %></p>
             </article>
