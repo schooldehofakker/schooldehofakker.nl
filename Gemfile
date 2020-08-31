@@ -19,10 +19,13 @@ group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw] # Call 'byebug' anywhere in the code to stop execution and get a debugger console
 end
 
+group :development, :staging, :test do
+  gem 'faker'
+end
 group :development do
   gem 'annotate'
   gem 'listen', '~> 3.2'
-  gem 'pry'
+  gem 'pry-rails'
   gem 'rails-erd'
   gem 'spring' # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring-watcher-listen', '~> 2.0.0'
@@ -32,7 +35,6 @@ end
 group :test do
   gem 'capybara', '>= 2.15' # Adds support for Capybara system testing and selenium driver
   gem 'factory_bot_rails'
-  gem 'faker'
   gem 'rails-controller-testing'
   gem 'rspec-core'
   gem 'rspec-expectations'
@@ -41,7 +43,7 @@ group :test do
   gem 'rspec-support'
   gem 'rubocop', require: false
   gem 'selenium-webdriver'
-  gem 'shoulda-matchers', '~> 4.0'
+  gem 'shoulda-matchers', '~> 4.4'
   gem 'simplecov'
   gem 'webdrivers' # Easy installation and use of web drivers to run system tests with browsers
 end
@@ -51,6 +53,8 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 # Added for this project
 gem 'aws-sdk-s3', require: false
+gem 'contentful'
 gem 'devise' # Devise is a flexible authentication solution for Rails based on Warden
 gem 'friendly_id' # FriendlyId is the "Swiss Army bulldozer" of slugging and permalink plugins for Active Record.
 gem 'image_processing', '~> 1.2' # Use Active Storage variant
+gem 'rich_text_renderer'
