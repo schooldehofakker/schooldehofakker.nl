@@ -4,8 +4,9 @@
 </div>
 <main class="main  container">
   <article class="article  article--page  content  typeset">
-    <h1>Over de school</h1>
-    <p>De Hofakker is een school waar kinderen met rode wangen en lichtjes in hun ogen uit school komen. De lessen worden zo ingericht dat het kind zichzelf kan verbinden met de wereld om hem of haar heen en tegelijkertijd het eigen levensdoel trouw kan blijven. Buiten zijn wordt afgewisseld met binnen zitten, om aan de natuurlijke behoefte van bewegen tegemoet te komen. Van buiten zijn en bewegen krijg je weer nieuwe energie!</p>
+    <% home = @content.entries(content_type:'pagina', 'fields.slug[in]' => 'over-de-school').first %>
+    <h1><%= home.title %></h1>
+    <%= @renderer.render(home.content).html_safe %>
   </article>
   <%= render partial: '/common/aside' %>
 </main>
