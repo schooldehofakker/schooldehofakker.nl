@@ -2,12 +2,18 @@ require 'aws-sdk-s3'
 require 'contentful'
 
 # Set the host name for URL creation
-SitemapGenerator::Sitemap.default_host = 'http://www.schooldehofakker.nl'
+SitemapGenerator::Sitemap.default_host = 'https://www.schooldehofakker.nl'
 
+region = Rails.application.credentials.aws[:region]
 SitemapGenerator::Sitemap.adapter = SitemapGenerator::AwsSdkAdapter.new(Rails.application.credentials.aws[:bucket],
                                                                         aws_access_key_id: Rails.application.credentials.aws[:access_key_id],
                                                                         aws_secret_access_key: Rails.application.credentials.aws[:secret_access_key],
-                                                                        aws_region: Rails.application.credentials.aws[:region])
+                                                                        aws_region: region)
+# The remote host where your sitemaps will be hosted
+SitemapGenerator::Sitemap.sitemaps_host = "https://hofakker-#{Rails.env}.s3-#{region}.amazonaws.com"
+
+# The directory to write sitemaps to locally
+SitemapGenerator::Sitemap.public_path = 'tmp/sitemap'
 
 SitemapGenerator::Sitemap.create do
   # Put links creation logic here.
@@ -46,8 +52,7 @@ SitemapGenerator::Sitemap.create do
     raise_errors: true
   )
 
-  nieuws = @content.entries(content_type: 'nieuws', order: '-fields.published')
-  nieuws.each do |n|
+  @content.entries(content_type: 'nieuws', order: '-fields.published').each do |n|
     add nieuw_path(n.slug), priority: 0.75, changefreq: 'daily', lastmod: n.published
   end
 end
