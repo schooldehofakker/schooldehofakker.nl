@@ -22,6 +22,7 @@ end
 group :development, :staging, :test do
   gem 'faker'
 end
+
 group :development do
   gem 'annotate'
   gem 'listen', '~> 3.2'
@@ -58,3 +59,5 @@ gem 'devise' # Devise is a flexible authentication solution for Rails based on W
 gem 'friendly_id' # FriendlyId is the "Swiss Army bulldozer" of slugging and permalink plugins for Active Record.
 gem 'image_processing', '~> 1.2' # Use Active Storage variant
 gem 'rich_text_renderer'
+gem 'sitemap_generator' # SitemapGenerator is the easiest way to generate Sitemaps in Ruby. Rails integration provides access to the Rails route helpers within your sitemap config file and automatically makes the rake tasks available to you.
+gem 'whenever'
