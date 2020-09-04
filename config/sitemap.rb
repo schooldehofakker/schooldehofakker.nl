@@ -1,7 +1,13 @@
+require 'aws-sdk-s3'
 require 'contentful'
 
 # Set the host name for URL creation
-SitemapGenerator::Sitemap.default_host = 'https://www.schooldehofakker.nl'
+SitemapGenerator::Sitemap.default_host = 'http://www.schooldehofakker.nl'
+
+SitemapGenerator::Sitemap.adapter = SitemapGenerator::AwsSdkAdapter.new(Rails.application.credentials.aws[:bucket],
+                                                                        aws_access_key_id: Rails.application.credentials.aws[:access_key_id],
+                                                                        aws_secret_access_key: Rails.application.credentials.aws[:secret_access_key],
+                                                                        aws_region: Rails.application.credentials.aws[:region])
 
 SitemapGenerator::Sitemap.create do
   # Put links creation logic here.
