@@ -58,6 +58,7 @@ gem 'contentful'
 gem 'devise' # Devise is a flexible authentication solution for Rails based on Warden
 gem 'friendly_id' # FriendlyId is the "Swiss Army bulldozer" of slugging and permalink plugins for Active Record.
 gem 'image_processing', '~> 1.2' # Use Active Storage variant
+gem 'recaptcha' # This gem provides helper methods for the reCAPTCHA API
 gem 'rich_text_renderer'
 gem 'sitemap_generator' # SitemapGenerator is the easiest way to generate Sitemaps in Ruby. Rails integration provides access to the Rails route helpers within your sitemap config file and automatically makes the rake tasks available to you.
 gem 'whenever'
