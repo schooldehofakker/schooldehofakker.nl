@@ -15,8 +15,6 @@
     <%= form.text_area :message, class: 'form-control', placeholder: 'Je bericht', required: 'required' %>
   </div>
    <div class="form-group">
-    <%= form.label 'reCAPTCHA:' %>
-    <%= form.label '*', class: 'required' %>
     <%= recaptcha_tags %><br />
    </div>
    <%= submit_tag "Verstuur bericht" %><br />
