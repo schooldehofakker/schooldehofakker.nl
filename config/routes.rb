@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'bedankt', to: 'bedankt#index'
   get 'contact', to: 'contact#index'
   post 'contact', to: 'contact#new'
+  get 'feed.xml', to: 'feeds#rss', format: 'rss'
   get 'kracht-van-de-hofakker', to: 'kracht#index'
   get 'leraren', to: 'leraren#index'
   resources 'nieuws'
