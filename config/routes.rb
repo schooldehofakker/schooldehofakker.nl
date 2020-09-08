@@ -13,7 +13,5 @@ Rails.application.routes.draw do
   get '/nieuws/:slug', to: 'nieuws#show'
   get 'vacatures', to: 'vacatures#index'
 
-  match '/404', to: 'errors#not_found', via: :all
-  match '/422', to: 'errors#unacceptable', via: :all
-  match '/500', to: 'errors#internal_server_error', via: :all
+  get '/sitemap.xml.gz', to: redirect("https://s3-#{Rails.application.credentials.aws[:region]}.amazonaws.com/#{Rails.application.credentials.aws[:bucket]}/sitemap.xml.gz")
 end
