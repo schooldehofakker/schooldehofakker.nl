@@ -22,6 +22,8 @@ class ContactController < ApplicationController
       ContactMailer.contact_email(@name, @email, @message).deliver_later
       redirect_to bedankt_path
     else
+      flash.delete(:recaptcha_error)
+      flash[:danger] = 'Recaptcha is niet ingevuld.'
       redirect_to contact_path
     end
   end

@@ -62,4 +62,5 @@ gem 'recaptcha' # This gem provides helper methods for the reCAPTCHA API
 gem 'redis'
 gem 'rich_text_renderer'
 gem 'sitemap_generator' # SitemapGenerator is the easiest way to generate Sitemaps in Ruby. Rails integration provides access to the Rails route helpers within your sitemap config file and automatically makes the rake tasks available to you.
+gem 'view_component'
 gem 'whenever'
