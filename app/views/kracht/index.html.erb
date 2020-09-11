@@ -4,9 +4,8 @@
 </div>
 <main class="main  container">
   <article class="article  article--page  content  typeset">
-    <% kracht = @content.entries(content_type:'pagina', 'fields.slug[in]' => 'kracht-van-de-hofakker').first %>
-    <h1><%= kracht.title %></h1>
-    <%= @renderer.render(kracht.content).html_safe %>
+    <h1><%= @kracht.title %></h1>
+    <%= @renderer.render(@kracht.content).html_safe %>
   </article>
   <%= render partial: '/common/aside' %>
 </main>
