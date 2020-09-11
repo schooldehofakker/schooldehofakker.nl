@@ -6,20 +6,19 @@
 <article class="article  article--page  content  typeset">
   <h1>Vacatures</h1>
   <ul class="list  list--posts">
-    <% vacatures = @content.entries(content_type:'vacatures', include: 2)%>
-    <% if vacatures.empty? %>
+    <% if @vacatures.empty? %>
       Er zijn momenteel geen vacatures op de Hofakker
     <% end %>
-    <% if !vacatures.empty? %>
-      Momenteel zijn er <%= vacatures.size %> vacatures:
+    <% if !@vacatures.empty? %>
+      Momenteel zijn er <%= @vacatures.size %> vacatures:
     <% end %>
-    <% vacatures.each do |v| %>
+    <% @vacatures.each do |v| %>
       <h3><%= v.titel %></h3>
       <%= @renderer.render(v.content).html_safe %>
     <% end %>
   </ul>
   </section>
-  <% if !vacatures.empty? %>
+  <% if !@vacatures.empty? %>
     <h2>Contact</h2>
     <%= render partial: '/common/contact' %>
   <% end %>
