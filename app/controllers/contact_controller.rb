@@ -1,6 +1,18 @@
 # index page
 class ContactController < ApplicationController
-  def index; end
+  def index
+    @contact = cache_data(key: 'contact') do
+      @content.entries(content_type: 'pagina', 'fields.slug[in]' => 'contact').first
+    end
+
+    @postadres = cache_data(key: 'postadres') do
+      @content.entries(content_type: 'pagina', 'fields.slug[in]' => 'postadres').first
+    end
+
+    @veiligheid = cache_data(key: 'veiligheid') do
+      @content.entries(content_type: 'pagina', 'fields.slug[in]' => 'veiligheid').first
+    end
+  end
 
   def new
     if verify_recaptcha

@@ -9,6 +9,17 @@ class ApplicationController < ActionController::Base
     @current_user ||= super || Guest.new
   end
 
+  # Allow for caching so we don't push our free plan on the contentful 
+  # api to the max
+  def cache_data(key, time = 2.days)
+    output = Rails.cache.fetch(key, expires_in: time) do
+      yield
+    end
+    output
+  rescue StandardError
+    yield
+  end
+
   def user_signed_in?
     current_user.is_a? User
   end
