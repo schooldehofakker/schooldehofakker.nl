@@ -4,16 +4,16 @@
 </div>
 <main class="main  container">
  <article class="article  article--page  content  typeset">
-   <% contact = @content.entries(content_type:'pagina', 'fields.slug[in]' => 'contact').first %>
-   <h1><%= contact.title %></h1>
-   <%= @renderer.render(contact.content).html_safe %>
+
+   <h1><%= @contact.title %></h1>
+   <%= @renderer.render(@contact.content).html_safe %>
    <%= render partial: '/common/contact' %>
-   <% postadres = @content.entries(content_type:'pagina', 'fields.slug[in]' => 'postadres').first %>
-   <h3><%= postadres.title %></h3>
-   <%= @renderer.render(postadres.content).html_safe %>
-   <% veiligheid = @content.entries(content_type:'pagina', 'fields.slug[in]' => 'veiligheid').first %>
-   <h3><%= veiligheid.title %></h3>
-   <%= @renderer.render(veiligheid.content).html_safe %>
+
+   <h3><%= @postadres.title %></h3>
+   <%= @renderer.render(@postadres.content).html_safe %>
+
+   <h3><%= @veiligheid.title %></h3>
+   <%= @renderer.render(@veiligheid.content).html_safe %>
 </article>
   <%= render partial: '/common/aside' %>
 </main>

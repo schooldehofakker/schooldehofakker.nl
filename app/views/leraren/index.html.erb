@@ -6,8 +6,7 @@
   <article class="article  article--page  content  typeset">
     <h1>Onze Leraren</h1>
     <ul class="list  list--posts">
-      <% leraren = @content.entries(content_type:'leraren', order: 'fields.voornaam', include: 2)%>
-      <% leraren.each do |l| %>
+      <% @leraren.each do |l| %>
         <h3><%= "#{l.voornaam} #{l.achternaam}" %></h3>
         <i></i>
         <figure class="figure  figure--right">

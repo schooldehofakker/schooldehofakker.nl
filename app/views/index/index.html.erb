@@ -4,9 +4,8 @@
 </div>
 <main class="main  container">
   <article class="article  article--page  content  typeset">
-    <% home = @content.entries(content_type:'pagina', 'fields.slug[in]' => 'over-de-school').first %>
-    <h1><%= home.title %></h1>
-    <%= @renderer.render(home.content).html_safe %>
+    <h1><%= @index.title %></h1>
+    <%= @renderer.render(@index.content).html_safe %>
   </article>
   <%= render partial: '/common/aside' %>
 </main>
