@@ -1,0 +1,5 @@
+<% notificatie = @content.entries(content_type:'notificatie', order: '-sys.updatedAt').first %>
+<% if !notificatie.blank? %>
+  <h4><%= notificatie.title %></h4>
+  <%= @renderer.render(notificatie.content).html_safe %>
+<% end %>
