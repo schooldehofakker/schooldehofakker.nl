@@ -57,7 +57,7 @@ gem 'aws-sdk-s3', require: false
 gem 'contentful'
 gem 'devise' # Devise is a flexible authentication solution for Rails based on Warden
 gem 'friendly_id' # FriendlyId is the "Swiss Army bulldozer" of slugging and permalink plugins for Active Record.
-gem 'image_processing', '~> 1.2' # Use Active Storage variant
+gem 'image_processing', '~> 1.12' # Use Active Storage variant
 gem 'recaptcha' # This gem provides helper methods for the reCAPTCHA API
 gem 'redis'
 gem 'rich_text_renderer'
