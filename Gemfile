@@ -8,7 +8,7 @@ ruby '2.6.6'
 gem 'bootsnap', '>= 1.4.2', require: false # Reduces boot times through caching; required in config/boot.rb
 gem 'jbuilder', '~> 2.10' # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'pg'
-gem 'puma', '~> 5.0' # Use Puma as the app server
+gem 'puma', '~> 5.1' # Use Puma as the app server
 gem 'rails', '~> 6.0.3'
 gem 'sass-rails', '>= 6' # Use SCSS for stylesheets
 gem 'turbolinks', '~> 5' # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
