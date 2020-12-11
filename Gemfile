@@ -8,8 +8,8 @@ ruby '2.6.6'
 gem 'bootsnap', '>= 1.4.2', require: false # Reduces boot times through caching; required in config/boot.rb
 gem 'jbuilder', '~> 2.10' # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'pg'
-gem 'puma', '~> 5.0' # Use Puma as the app server
-gem 'rails', '~> 6.0.3'
+gem 'puma', '~> 5.1' # Use Puma as the app server
+gem 'rails', '~> 6.1.0'
 gem 'sass-rails', '>= 6' # Use SCSS for stylesheets
 gem 'turbolinks', '~> 5' # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'webpacker', '~> 5.2' # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
@@ -25,7 +25,7 @@ end
 
 group :development do
   gem 'annotate'
-  gem 'listen', '~> 3.2'
+  gem 'listen', '~> 3.3'
   gem 'pry-rails'
   gem 'rails-erd'
   gem 'spring' # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
