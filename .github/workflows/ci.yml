@@ -32,8 +32,8 @@ jobs:
         with:
           node-version: 12.15.0
 
-      # - name: Run ruby code linter (Rubocop)
-      #   run: bin/rubocop
+      - name: Run ruby code linter (Rubocop)
+        run: bin/rubocop
 
       - name: Run vulnerability scanner (Brakeman)
         run: bin/brakeman -q -w2
