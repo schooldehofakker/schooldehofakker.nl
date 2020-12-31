@@ -66,7 +66,7 @@ jobs:
           HEROKU_APP_NAME: "hofakker-staging"
         # Deploy develop to staging app, this will autodeploy master so we have push to origin/develop:main
         run: |
-          git push --force https://heroku:$HEROKU_API_TOKEN@git.heroku.com/$HEROKU_APP_NAME.git origin/develop:main
+          git push https://heroku:$HEROKU_API_TOKEN@git.heroku.com/$HEROKU_APP_NAME.git origin/develop:main
 
       - name: Deploy to production environment
         if: github.ref == 'refs/heads/master' && job.status == 'success'
