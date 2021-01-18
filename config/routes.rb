@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   get 'leraren', to: 'leraren#index'
   resources 'nieuws'
   get '/nieuws/:slug', to: 'nieuws#show'
+  get 'nieuwsbrieven', to: 'nieuwsbrieven#index'
+  get 'nieuwsbrieven/:slug', to: 'nieuwsbrieven#show'
   get 'vacatures', to: 'vacatures#index'
 
   get '/sitemap.xml.gz', to: redirect("https://s3-#{Rails.application.credentials.aws[:region]}.amazonaws.com/#{Rails.application.credentials.aws[:bucket]}/sitemap.xml.gz")
