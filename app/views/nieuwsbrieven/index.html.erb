@@ -15,10 +15,11 @@
         <% @allnewsletters.each do |n| %>
             <li class="item  item--post">
               <article class="article  article--post">
-                <h2><%= link_to n.titel, nieuwsbrieven_path(n.slug) %></h2>
+                <h2><%= link_to n.titel, "/nieuwsbrieven/#{n.slug}" %></h2>
                 <small class="small  post-meta">
                   &nbsp;&middot;&nbsp;<time datetime="nieuws data time" class="time"><%= n.published.strftime("%d %B %Y")  %></time>
                 </small>
+                <p><%= n.beschrijving %></p>
               </article>
             </li>
           <% end %>

@@ -1,0 +1,19 @@
+<div class="feature" style="background-image: url(<%= asset_path 'banner_nieuws.jpg' %>) ">
+    <div class="container  typeset">
+    </div>
+</div>
+<main class="main  container">
+  <div class="content">
+  <article class="article  article--post  typeset">
+    <h1><%= @newsletter.titel %></h1>
+    <section class="section  typeset">
+      </section>
+    <small class="small  post-meta">
+      &nbsp;&middot;&nbsp;<time datetime="<%= @newsletter.published %>" class="time"><%= @newsletter.published.strftime("%d %B %Y")  %></time>
+    </small>
+    <%= @renderer.render(@newsletter.content).html_safe %>
+    <%= render partial: '/common/share' %>
+  </article>
+  </div>
+  <%= render partial: '/nieuwsbrieven/aside' %>
+</main>

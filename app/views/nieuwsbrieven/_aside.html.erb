@@ -1,0 +1,22 @@
+<aside class="aside  typeset  aside--right">
+  <section class="section  section--related-posts">
+    <%= image_tag "Hofakker-logo-vs-RGB.png", alt: "School de Hofakker logo" %>
+    <% if @othernewsletters.empty? %>
+      Er zijn momenteel geen andere nieuwsbrieven van de Hofakker
+    <% else %>
+      <% @othernewsletters.each do |n| %>
+        <ul class="list  list--posts">
+          <li class="item  item--post">
+            <article class="article  article--post  typeset">
+              <h4><%= link_to n.titel, nieuwsbrieven_path(n.slug) %></h4>
+              <small class="small  post-meta">
+                &nbsp;&middot;&nbsp;<time datetime="<%= n.published %>" class="time"><%= n.published.strftime("%d %B %Y")  %></time>
+              </small>
+              <p><%= n.beschrijving %></p>
+            </article>
+          </li>
+        <% end %>
+        </ul>
+      <% end %>
+  </section>
+</aside>
