@@ -1,4 +1,4 @@
-<div class="feature" style="background-image: url(<%= asset_path 'banner_nieuws.jpg' %>) ">
+<div class="feature" style="background-image: url(<%= asset_path 'banner_kleuterklas.png' %>) ">
     <div class="container  typeset">
     </div>
 </div>
@@ -8,9 +8,10 @@
       <h1>Nieuwsbrieven van de Hofakker</h1>
     </article>
     <section class="section  typeset">
+      <p>Af en toe sturen we een grote Hofnieuws rond voor zij die de school een warm hart toedragen, en benieuwd zijn over recente ontwikkelingen (aanmelden kan binnenkort via deze pagina).</p>
       <ul class="list  list--posts">
         <% if @allnewsletters.empty? %>
-          Er zijn momenteel geen nieuwsberichten van de Hofakker
+          Er zijn momenteel geen nieuwsbrieven van de Hofakker
         <% end %>
         <% @allnewsletters.each do |n| %>
             <li class="item  item--post">
