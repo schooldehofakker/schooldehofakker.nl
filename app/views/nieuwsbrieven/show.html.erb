@@ -7,12 +7,21 @@
   <article class="article  article--post  typeset">
     <h1><%= @newsletter.titel %></h1>
     <section class="section  typeset">
-      </section>
-    <small class="small  post-meta">
-      &nbsp;&middot;&nbsp;<time datetime="<%= @newsletter.published %>" class="time"><%= @newsletter.published.strftime("%d %B %Y")  %></time>
-    </small>
-    <%= @renderer.render(@newsletter.content).html_safe %>
-    <%= render partial: '/common/share' %>
+      <% if current_user.admin? %>
+        <% if @mailinglist.mailinglist_send == true %>
+          <small class="small  post-meta">
+            Verzonden op <time datetime="<%= @mailinglist.send_at %>" class="time"><%= @mailinglist.send_at.strftime("%d %B %Y")  %></time>
+          </small>
+        <% else %>
+          <%= link_to "/nieuwsbrieven/#{@newsletter.slug}/send", class: 'button btn btn-primary', style: "background: #77B82A" do %>
+            <span class="glyphicon glyphicon-pencil"></span>
+            Vestuur
+          <% end %>
+        <% end %>
+    </section
+  <% end %>
+  <%= @renderer.render(@newsletter.content).html_safe %>
+  <%= render partial: '/common/share' %>
   </article>
   </div>
   <%= render partial: '/nieuwsbrieven/aside' %>

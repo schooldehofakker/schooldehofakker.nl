@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :mailinglists
   devise_for :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root 'index#index'
@@ -13,6 +14,7 @@ Rails.application.routes.draw do
   get '/nieuws/:slug', to: 'nieuws#show'
   get 'nieuwsbrieven', to: 'nieuwsbrieven#index'
   get 'nieuwsbrieven/:slug', to: 'nieuwsbrieven#show'
+  get 'nieuwsbrieven/:slug/send', to: 'nieuwsbrieven#send_to_mailinglist'
   get 'vacatures', to: 'vacatures#index'
 
   get '/sitemap.xml.gz', to: redirect("https://s3-#{Rails.application.credentials.aws[:region]}.amazonaws.com/#{Rails.application.credentials.aws[:bucket]}/sitemap.xml.gz")
