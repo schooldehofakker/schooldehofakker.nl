@@ -14,7 +14,8 @@ Rails.application.routes.draw do
   get '/nieuws/:slug', to: 'nieuws#show'
   get 'nieuwsbrieven', to: 'nieuwsbrieven#index'
   get 'nieuwsbrieven/:slug', to: 'nieuwsbrieven#show'
-  get 'nieuwsbrieven/:slug/send', to: 'nieuwsbrieven#send_to_mailinglist'
+  get 'nieuwsbrieven/:slug/verzenden', to: 'nieuwsbrieven#send_to_mailinglist'
+  get 'nieuwsbrieven/:uuid/afmelden', to: 'nieuwsbrieven#unsubscribe_from_mailinglist'
   get 'vacatures', to: 'vacatures#index'
 
   get '/sitemap.xml.gz', to: redirect("https://s3-#{Rails.application.credentials.aws[:region]}.amazonaws.com/#{Rails.application.credentials.aws[:bucket]}/sitemap.xml.gz")

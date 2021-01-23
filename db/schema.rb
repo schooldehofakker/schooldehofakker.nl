@@ -10,10 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_21_132210) do
+ActiveRecord::Schema.define(version: 2021_01_22_144245) do
 
   # These are extensions that must be enabled in order to support this database
+  enable_extension "pgcrypto"
   enable_extension "plpgsql"
+  enable_extension "uuid-ossp"
 
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
@@ -87,6 +89,7 @@ ActiveRecord::Schema.define(version: 2021_01_21_132210) do
     t.boolean "admin", default: false, null: false
     t.string "first_name"
     t.string "last_name"
+    t.uuid "uuid", default: -> { "uuid_generate_v4()" }, null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

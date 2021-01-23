@@ -13,7 +13,7 @@
             Verzonden op <time datetime="<%= @mailinglist.send_at %>" class="time"><%= @mailinglist.send_at.strftime("%d %B %Y")  %></time>
           </small>
         <% else %>
-          <%= link_to "/nieuwsbrieven/#{@newsletter.slug}/send", class: 'button btn btn-primary', style: "background: #77B82A" do %>
+          <%= link_to "/nieuwsbrieven/#{@newsletter.slug}/verzenden", class: 'button btn btn-primary', style: "background: #77B82A" do %>
             <span class="glyphicon glyphicon-pencil"></span>
             Vestuur
           <% end %>
