@@ -17,7 +17,7 @@ class NieuwsbrievenController < ApplicationController
 
   def send_to_user
     Rails.logger.info("Sending a mailing to #{@user.email}")
-    # HofnieuwsMailer.send_hofnieuws_email(@user).deliver_later
+    HofnieuwsMailer.send_hofnieuws_email(@user).deliver_later
   end
 
   def send_to_mailinglist
