@@ -1,5 +1,7 @@
 <p>Beste <%= "#{@user.full_name}" %>,</p>
-<p>Met veel plezier sturen we je een nieuwe Hofnieuws toe.</p>
+<p>We hebben de nieuwste Lange Hofnieuws van December 2020 op de website gezet, klik op onderstaande link
+om deze te bekijken!</p>
+<%= "#{root_url}nieuwsbrieven/hofnieuws-december-2020" %>
 <p>Met vriendelijke groet, School de Hofakker</p>
 <br>
 <p>Mocht u de Hofnieuws mailings niet langer willen ontvangen dan kunt u zich afmelden via deze link: <a href="<%= "#{root_url}nieuwsbrieven/#{@user.uuid}/afmelden" %>"><%= "#{root_url}nieuwsbrieven/#{@user.uuid}/afmelden" %></a> <p/>
