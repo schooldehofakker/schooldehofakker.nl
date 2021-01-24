@@ -1,7 +1,7 @@
 # index page
 class NieuwsbrievenController < ApplicationController
   before_action :set_mailing_list, only: %i[send_to_mailinglist show]
-  before_action :set_user, only: %i[unsubscribe_from_mailinglist]
+  before_action :set_user, only: %i[send_to_user unsubscribe_from_mailinglist]
   before_action :authenticate_admin!, only: %i[send_to_mailinglist]
 
   def index
@@ -13,6 +13,11 @@ class NieuwsbrievenController < ApplicationController
   def show
     @newsletter = @content.entries(content_type: 'nieuwsbrieven', 'fields.slug[in]' => params[:slug]).first
     @othernewsletters = @content.entries(content_type: 'nieuwsbrieven', order: '-fields.published', 'fields.slug[ne]' => params[:slug])
+  end
+
+  def send_to_user
+    Rails.logger.info("Sending a mailing to #{@user.email}")
+    # HofnieuwsMailer.send_hofnieuws_email(@user).deliver_later
   end
 
   def send_to_mailinglist
