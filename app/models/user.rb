@@ -24,4 +24,12 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+  def full_name
+    if !last_name.blank?
+      [first_name, last_name].join(' ')
+    else
+      email
+    end
+  end
 end

@@ -7,6 +7,11 @@
     <li class="item  item--nav  <%= active_class(nieuwsbrieven_path) %>"><%= link_to "Nieuwsbrieven", nieuwsbrieven_path %></li>
     <li class="item  item--nav  <%= active_class(vacatures_path) %>"><%= link_to "Vacatures", vacatures_path %></li>
     <li class="item  item--nav  <%= active_class(contact_path) %>"><%= link_to "Contact", contact_path %></li>
+    <% if user_signed_in? %>
+      <li class="item  item--nav"><%= link_to "Log uit", destroy_user_session_path, :method => :delete %></li>
+    <% else %>
+      <li class="item  item--nav"><%= link_to 'Log in', new_user_session_path %></li>
+    <% end %>
   </ul>
   <button class="button  button--nav" aria-label="Menu toggle">
     <svg width="16" height="16" class="icon  icon--nav" role="img" alt="Menu"><title>Menu</title><use xlink:href="#nav" fill="CurrentColor"></use></svg>
