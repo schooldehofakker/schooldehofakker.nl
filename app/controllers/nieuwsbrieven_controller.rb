@@ -40,7 +40,8 @@ class NieuwsbrievenController < ApplicationController
 
   def unsubscribe_from_mailinglist
     # currently we use the background user table only for mailings
-    User.delete(@user.id)
+    @user.deleted_at = Time.now
+    @user.save!
     redirect_to nieuwsbrieven_path, notice: 'U bent afgemeldt, u kunt zich altijd weer aanmelden via deze pagina'
   end
 

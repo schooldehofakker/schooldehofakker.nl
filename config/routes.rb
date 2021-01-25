@@ -14,7 +14,6 @@ Rails.application.routes.draw do
   get '/nieuws/:slug', to: 'nieuws#show'
   get 'nieuwsbrieven', to: 'nieuwsbrieven#index'
   get 'nieuwsbrieven/:slug', to: 'nieuwsbrieven#show'
-  get 'nieuwsbrieven/:uuid/verzenden', to: 'nieuwsbrieven#send_to_user'
   get 'nieuwsbrieven/:uuid/afmelden', to: 'nieuwsbrieven#unsubscribe_from_mailinglist'
   get 'vacatures', to: 'vacatures#index'
 

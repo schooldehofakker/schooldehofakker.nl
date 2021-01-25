@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_24_203948) do
+ActiveRecord::Schema.define(version: 2021_01_25_105729) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -92,6 +92,7 @@ ActiveRecord::Schema.define(version: 2021_01_24_203948) do
     t.uuid "uuid", default: -> { "uuid_generate_v4()" }, null: false
     t.string "last_mailing"
     t.datetime "last_mailing_send_at"
+    t.datetime "deleted_at"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
