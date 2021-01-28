@@ -32,4 +32,9 @@ class User < ApplicationRecord
       email
     end
   end
+
+  def new_random_password
+    self.password = Digest::SHA1.hexdigest("--#{Time.now}--#{email}--")[0, 6]
+    self.password_confirmation = password
+  end
 end

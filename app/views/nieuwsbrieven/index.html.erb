@@ -8,7 +8,8 @@
       <h1>Nieuwsbrieven van de Hofakker</h1>
     </article>
     <section class="section  typeset">
-      <p>Af en toe sturen we een grote Hofnieuws rond voor zij die de school een warm hart toedragen, en benieuwd zijn over recente ontwikkelingen (aanmelden kan binnenkort via deze pagina).</p>
+      <p>Af en toe sturen we een grote Hofnieuws rond voor zij die de school een warm hart toedragen, en benieuwd zijn over recente ontwikkelingen</p>
+      <p>Aanmelden <a href="#aanmelden">kan hier</a></p>
       <ul class="list  list--posts">
         <% if @allnewsletters.empty? %>
           Er zijn momenteel geen nieuwsbrieven van de Hofakker
@@ -25,6 +26,12 @@
             </li>
           <% end %>
       </ul>
+    </section>
+    <article class="article  article--page  typeset">
+      <h1 id="aanmelden">Aanmelden</h1>
+    </article>
+    <section class="section  typeset">
+      <%= render partial: 'subscribe' %>
     </section>
   </div>
   <%= render partial: '/common/aside' %>

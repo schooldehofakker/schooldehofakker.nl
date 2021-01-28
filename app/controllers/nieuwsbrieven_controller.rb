@@ -38,6 +38,20 @@ class NieuwsbrievenController < ApplicationController
     redirect_to nieuwsbrieven_path, notice: 'Nieuwsbrief is verzonden'
   end
 
+  def subscribe_to_mailinglist
+    if verify_recaptcha
+      user = User.new
+      user.email = params[:email]
+      user.first_name = params[:first_name]
+      user.last_name = params[:last_name]
+      user.password = user.new_random_password
+      user.save!
+      redirect_to nieuwsbrieven_path, notice: 'U bent aangemeld op de mailinglijst'
+    else
+      redirect_to nieuwsbrieven_path, notice: 'De Recaptcha is niet goed ingevuld, probeer het nog keer'
+    end
+  end
+
   def unsubscribe_from_mailinglist
     # currently we use the background user table only for mailings
     @user.deleted_at = Time.now
