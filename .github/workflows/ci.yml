@@ -33,7 +33,7 @@ jobs:
 
       - name: Install gem files
         run: |
-          gem install bundler
+          gem install bundler -v '2.2.5'
           bundle install
 
       # - name: Run ruby code linter (Rubocop)
@@ -64,7 +64,7 @@ jobs:
       #   run: bin/rspec
 
       - name: Deploy to staging environment
-        if: github.ref == 'refs/heads/feature/Add-nieuwsbrieven' && job.status == 'success'
+        if: github.ref == 'refs/heads/develop' && job.status == 'success'
         env:
           HEROKU_API_TOKEN: ${{ secrets.HEROKU_API_TOKEN }}
           HEROKU_APP_NAME: "hofakker-staging"
