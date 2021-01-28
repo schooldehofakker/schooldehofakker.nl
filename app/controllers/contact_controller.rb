@@ -23,8 +23,7 @@ class ContactController < ApplicationController
       redirect_to bedankt_path
     else
       flash.delete(:recaptcha_error)
-      flash[:danger] = 'Recaptcha is niet ingevuld.'
-      redirect_to contact_path
+      redirect_to contact_path, notice: 'Recaptache is niet ingevuld!'
     end
   end
 
