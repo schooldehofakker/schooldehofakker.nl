@@ -6,7 +6,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.7.2'
 
 gem 'bootsnap', '>= 1.4.2', require: false # Reduces boot times through caching; required in config/boot.rb
-gem 'jbuilder', '~> 2.10' # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+gem 'jbuilder', '~> 2.11' # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'pg'
 gem 'puma', '~> 5.1' # Use Puma as the app server
 gem 'rails', '~> 6.1.0'
