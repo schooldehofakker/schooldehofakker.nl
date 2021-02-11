@@ -11,7 +11,7 @@ module Seeds
 
         User.where(admin: false).destroy_all
         require 'faker'
-        25.times do |_row|
+        5.times do |_row|
           last_name = Faker::Name.last_name
           password_length = 32
           password = Devise.friendly_token.first(password_length)
@@ -23,6 +23,7 @@ module Seeds
             uuid: SecureRandom.uuid,
             created_at: Time.now,
             updated_at: Time.now,
+            deleted_at: [nil, Time.now].sample,
             password: password,
             password_confirmation: password
           )

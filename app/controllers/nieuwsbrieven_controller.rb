@@ -18,14 +18,13 @@ class NieuwsbrievenController < ApplicationController
   def send_mailinglist
     # only send a mailinglist once
     if !@mailinglist.mailinglist_send == true
-      # we send it to all users for now, might differentiate later
-      User.all.each do |user|
+      # we send it to active users
+      User.where(deleted_at: nil).each do |user|
         HofnieuwsWorker.perform_async(user.email)
       end
-      # we send it to all users for now, might differentiate later
       @mailinglist.sender = current_user.id
       @mailinglist.send_at = Time.now
-      @mailinglist.mailinglist_send = true
+      # @mailinglist.mailinglist_send = true
       @mailinglist.save!
     end
     redirect_to "/nieuwsbrieven/#{@mailinglist.slug}", notice: "Nieuwsbrief #{@mailinglist.slug} is verzonden"
