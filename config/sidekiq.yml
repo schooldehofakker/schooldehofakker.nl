@@ -1,0 +1,7 @@
+# config/sidekiq.yml
+
+:verbose: true
+:concurrency: 1
+
+:queues:
+  - ["default", 1]
