@@ -18,6 +18,8 @@ gem 'webpacker', '~> 5.2' # Transpile app-like JavaScript. Read more: https://gi
 group :development, :test do
   gem 'brakeman'
   gem 'byebug', platforms: %i[mri mingw x64_mingw] # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'rubocop-rails'
+  gem 'rubocop-rspec'
 end
 
 group :development, :staging, :test do
