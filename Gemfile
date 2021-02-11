@@ -6,11 +6,12 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.7.2'
 
 gem 'bootsnap', '>= 1.4.2', require: false # Reduces boot times through caching; required in config/boot.rb
-gem 'jbuilder', '~> 2.10' # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+gem 'jbuilder', '~> 2.11' # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'pg'
-gem 'puma', '~> 5.1' # Use Puma as the app server
-gem 'rails', '~> 6.1.0'
+gem 'puma', '~> 5.2' # Use Puma as the app server
+gem 'rails', '~> 6.1.2'
 gem 'sass-rails', '>= 6' # Use SCSS for stylesheets
+gem 'sidekiq'
 gem 'turbolinks', '~> 5' # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'webpacker', '~> 5.2' # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 
@@ -44,7 +45,7 @@ group :test do
   gem 'rspec-support'
   gem 'rubocop', require: false
   gem 'selenium-webdriver'
-  gem 'shoulda-matchers', '~> 4.4'
+  gem 'shoulda-matchers', '~> 4.5'
   gem 'simplecov'
   gem 'webdrivers' # Easy installation and use of web drivers to run system tests with browsers
 end

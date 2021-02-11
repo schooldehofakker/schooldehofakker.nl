@@ -14,10 +14,11 @@ module Seeds
       end
 
       def seed_user
-        user = User.find_or_create_by!(email: p('blijblijblij@hey.com')) do |newuser|
+        user = User.find_or_create_by!(email: 'blijblijblij@hey.com') do |newuser|
           newuser.first_name = 'Rogier'
           newuser.last_name = 'Wessel'
           newuser.admin = true
+          newuser.uuid = SecureRandom.uuid
           newuser.password = Rails.application.credentials.bootstrap[:password]
           newuser.password_confirmation = Rails.application.credentials.bootstrap[:password]
         end

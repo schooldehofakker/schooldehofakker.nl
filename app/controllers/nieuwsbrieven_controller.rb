@@ -1,8 +1,8 @@
 # index page
 class NieuwsbrievenController < ApplicationController
-  before_action :set_mailing_list, only: %i[send_to_mailinglist show]
+  before_action :set_mailing_list, only: %i[send_mailinglist show]
   before_action :set_user, only: %i[send_to_user unsubscribe_from_mailinglist]
-  before_action :authenticate_admin!, only: %i[send_to_mailinglist]
+  before_action :authenticate_admin!, only: %i[send_mailinglist]
 
   def index
     @allnewsletters = cache_data(key: 'nieuwsbrieven', time: 1.hour) do
@@ -15,27 +15,19 @@ class NieuwsbrievenController < ApplicationController
     @othernewsletters = @content.entries(content_type: 'nieuwsbrieven', order: '-fields.published', 'fields.slug[ne]' => params[:slug])
   end
 
-  def send_to_user
-    Rails.logger.info("Sending a mailing to #{@user.email}")
-    HofnieuwsMailer.send_hofnieuws_email(@user).deliver_later
-    render json: { success: true, course: @user.email }
-  end
-
-  def send_to_mailinglist
+  def send_mailinglist
     # only send a mailinglist once
     if !@mailinglist.mailinglist_send == true
-      # we send it to all users for now, might differentiate later
-      @users = User.all
-      @users.each do |user|
-        Rails.logger.info("Sending a mailing to #{user.email}")
-        HofnieuwsMailer.send_hofnieuws_email(user).deliver_later
+      # we send it to active users
+      User.where(deleted_at: nil).each do |user|
+        HofnieuwsWorker.perform_async(user.email)
       end
       @mailinglist.sender = current_user.id
       @mailinglist.send_at = Time.now
-      @mailinglist.mailinglist_send = true
+      # @mailinglist.mailinglist_send = true
       @mailinglist.save!
     end
-    redirect_to nieuwsbrieven_path, notice: 'Nieuwsbrief is verzonden'
+    redirect_to "/nieuwsbrieven/#{@mailinglist.slug}", notice: "Nieuwsbrief #{@mailinglist.slug} is verzonden"
   end
 
   def subscribe_to_mailinglist
@@ -48,7 +40,7 @@ class NieuwsbrievenController < ApplicationController
       user.save!
       redirect_to nieuwsbrieven_path, notice: 'U bent aangemeld op de mailinglijst'
     else
-      redirect_to nieuwsbrieven_path, notice: 'De Recaptcha is niet goed ingevuld, probeer het nog keer'
+      redirect_to nieuwsbrieven_path, notice: 'U heeft niet alles goed ingevuld, probeer het nog keer'
     end
   end
 
