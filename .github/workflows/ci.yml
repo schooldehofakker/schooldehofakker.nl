@@ -36,8 +36,8 @@ jobs:
           gem install bundler -v '2.2.5'
           bundle install
 
-      # - name: Run ruby code linter (Rubocop)
-      #   run: bin/rubocop
+      - name: Run ruby code linter (Rubocop)
+        run: bin/rubocop
 
       - name: Run vulnerability scanner (Brakeman)
         run: bin/brakeman -q -w2
