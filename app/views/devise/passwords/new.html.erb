@@ -1,8 +1,8 @@
 <main class="main  container">
   <div class="content">
   <article class="article  article--post  typeset">
-    <h1>Wachtwoord vergeten?</h1>
     <section class="section  typeset">
+      <h2>Wachtwoord vergeten?</h2>
       <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
         <%= render "devise/shared/error_messages", resource: resource %>
         <div class="field">
