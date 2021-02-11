@@ -27,7 +27,7 @@ class NieuwsbrievenController < ApplicationController
       # @mailinglist.mailinglist_send = true
       @mailinglist.save!
     end
-    redirect_to "/nieuwsbrieven/#{@mailinglist.slug}", notice: "Nieuwsbrief #{@mailinglist.slug} is verzonden"
+    redirect_to nieuwsbrieven_path, notice: "Nieuwsbrief #{@mailinglist.slug} is verzonden"
   end
 
   def subscribe_to_mailinglist
