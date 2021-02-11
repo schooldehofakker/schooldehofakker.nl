@@ -26,10 +26,10 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   def full_name
-    if !last_name.blank?
-      [first_name, last_name].join(' ')
-    else
+    if last_name.blank?
       email
+    else
+      [first_name, last_name].join(' ')
     end
   end
 
