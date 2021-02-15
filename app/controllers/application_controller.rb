@@ -3,6 +3,7 @@ require 'contentful'
 # ApplicationController
 class ApplicationController < ActionController::Base
   before_action :check_contentful_client
+  before_action :check_agenda
   before_action :create_richtext_renderer
 
   def current_user
@@ -22,6 +23,19 @@ class ApplicationController < ActionController::Base
   end
 
   private
+
+  # cache agenda items
+  def check_agenda
+    puts "#" * 60
+    puts "app/controllers/application_controller.rb:30"
+    puts "*" * 60
+    @agenda ||= cache_data(key: 'nieuws', time: 1.day) do
+      puts "#" * 60
+      puts "app/controllers/application_controller.rb:31"
+      puts "*" * 60
+      @content.entries(content_type: 'agenda', order: 'fields.from', limit: 5, 'fields.from[gte]' => Time.now.strftime('%Y-%m-%d'))
+    end
+  end
 
   # Creates a Contentful Client Instance
   def check_contentful_client
