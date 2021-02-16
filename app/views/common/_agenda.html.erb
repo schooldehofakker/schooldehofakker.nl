@@ -3,9 +3,9 @@
   <p>
   <% @agenda.each do |a| %>
     <% if a.from === a.to %>
-      <%= a.from.strftime("%d-%m") %>: <%= a.title %>
+      <%= a.from.strftime("%d-%m") %> - <%= a.title %>
     <% else %>
-      <%= a.from.strftime("%d-%m") %> / <%= a.to.strftime("%d-%m") %>: <%= a.title %>
+      <%= a.from.strftime("%d-%m") %> / <%= a.to.strftime("%d-%m") %> - <%= a.title %>
     <% end %>
     <br/>
   <% end %>
