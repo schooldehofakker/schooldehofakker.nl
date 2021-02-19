@@ -39,6 +39,7 @@ if ENV['RAILS_ENV'] == 'test'
   puts 'required simplecov'
 end
 
+require 'shoulda/matchers'
 # shoulda matchers
 Shoulda::Matchers.configure do |config|
   config.integrate do |with|

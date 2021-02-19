@@ -1,10 +1,11 @@
 class HofnieuwsMailer < ApplicationMailer
-  def send_hofnieuws_email(user)
+  def send_hofnieuws_email(user, mailing)
     @user = user
+    @mailing = mailing
     mail({
            to: user.email,
            from: 'mailing@schooldehofakker.nl',
-           subject: 'Hofnieuws van School de Hofakker'
+           subject: mailing.title
          })
   end
 end

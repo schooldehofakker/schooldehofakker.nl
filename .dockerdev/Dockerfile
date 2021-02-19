@@ -32,6 +32,7 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
 
 # Install dependencies
 COPY Aptfile /tmp/Aptfile
+RUN apt-key adv --refresh-keys --keyserver ha.pool.sks-keyservers.net
 RUN apt-get update -qq && DEBIAN_FRONTEND=noninteractive apt-get -yq dist-upgrade && \
   DEBIAN_FRONTEND=noninteractive apt-get install -yq --no-install-recommends \
     libpq-dev \

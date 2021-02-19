@@ -8,20 +8,25 @@
       <h1>Nieuwsbrieven van de Hofakker</h1>
     </article>
     <section class="section  typeset">
+      <% if current_user.admin? %>
+        <%= link_to 'Nieuw', new_mailing_path, class: 'button btn btn-primary', style: "background: #77B82A" %>
+      <% end %>
+    </section>
+    <section class="section  typeset">
       <p>Af en toe sturen we een grote Hofnieuws rond voor zij die de school een warm hart toedragen, en benieuwd zijn over recente ontwikkelingen</p>
       <p>Aanmelden <a href="#aanmelden">kan hier</a></p>
       <ul class="list  list--posts">
-        <% if @allnewsletters.empty? %>
+        <% if @mailings.empty? %>
           Er zijn momenteel geen nieuwsbrieven van de Hofakker
         <% end %>
-        <% @allnewsletters.each do |n| %>
+        <% @mailings.each do |mailing| %>
             <li class="item  item--post">
               <article class="article  article--post">
-                <h2><%= link_to n.titel, "/nieuwsbrieven/#{n.slug}" %></h2>
+                <h2><%= link_to mailing.title, "/mailings/#{mailing.slug}" %></h2>
                 <small class="small  post-meta">
-                  &nbsp;&middot;&nbsp;<time datetime="nieuws data time" class="time"><%= n.published.strftime("%d %B %Y")  %></time>
+                  &nbsp;&middot;&nbsp;<time datetime="nieuws data time" class="time"><%= mailing.published_at.strftime("%d %B %Y")  %></time>
                 </small>
-                <p><%= n.beschrijving %></p>
+                <p><%= mailing.description %></p>
               </article>
             </li>
           <% end %>
@@ -36,3 +41,5 @@
   </div>
   <%= render partial: '/common/aside' %>
 </main>
+<%# <%= link_to 'Show', mailing %1> %>
+<%# <%= link_to 'Edit', edit_mailing_path(mailing) %1> %>
