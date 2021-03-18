@@ -4,6 +4,7 @@
 #
 #  id                     :bigint           not null, primary key
 #  admin                  :boolean          default(FALSE), not null
+#  deleted_at             :datetime
 #  email                  :string           default(""), not null
 #  encrypted_password     :string           default(""), not null
 #  first_name             :string
@@ -11,6 +12,7 @@
 #  remember_created_at    :datetime
 #  reset_password_sent_at :datetime
 #  reset_password_token   :string
+#  uuid                   :uuid             not null
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
 #
@@ -34,7 +36,7 @@ class User < ApplicationRecord
   end
 
   def new_random_password
-    self.password = Digest::SHA1.hexdigest("--#{Time.now}--#{email}--")[0, 6]
+    self.password = Digest::SHA1.hexdigest("--#{Time.now.to_i}--#{email}--")[0, 6]
     self.password_confirmation = password
   end
 end

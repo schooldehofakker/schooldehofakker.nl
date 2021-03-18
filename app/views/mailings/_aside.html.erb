@@ -1,18 +1,18 @@
 <aside class="aside  typeset  aside--right">
   <section class="section  section--related-posts">
     <%= image_tag "Hofakker-logo-vs-RGB.png", alt: "School de Hofakker logo" %>
-    <% if @othernewsletters.empty? %>
+    <% if @othermailings.blank? %>
       Er zijn momenteel geen andere nieuwsbrieven van de Hofakker
     <% else %>
-      <% @othernewsletters.each do |n| %>
+      <% @othermailings.each do |mailing| %>
         <ul class="list  list--posts">
           <li class="item  item--post">
             <article class="article  article--post  typeset">
-              <h4><%= link_to n.titel, nieuwsbrieven_path(n.slug) %></h4>
+              <h4><%= link_to mailing.title, "/nieuwsbrieven/#{mailing.slug}" %></h4>
               <small class="small  post-meta">
-                &nbsp;&middot;&nbsp;<time datetime="<%= n.published %>" class="time"><%= n.published.strftime("%d %B %Y")  %></time>
+                &nbsp;&middot;&nbsp;<time datetime="<%= mailing.published_at %>" class="time"><%= mailing.published_at.strftime("%d %B %Y")  %></time>
               </small>
-              <p><%= n.beschrijving %></p>
+              <p><%= mailing.description %></p>
             </article>
           </li>
         <% end %>

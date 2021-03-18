@@ -270,6 +270,12 @@ GEM
       unicode-display_width (>= 1.4.0, < 3.0)
     rubocop-ast (1.4.1)
       parser (>= 2.7.1.5)
+    rubocop-faker (1.1.0)
+      faker (>= 2.12.0)
+      rubocop (>= 0.82.0)
+    rubocop-performance (1.9.2)
+      rubocop (>= 0.90.0, < 2.0)
+      rubocop-ast (>= 0.4.0)
     rubocop-rails (2.9.1)
       activesupport (>= 4.2.0)
       rack (>= 1.1)
@@ -375,7 +381,7 @@ DEPENDENCIES
   factory_bot_rails
   faker
   friendly_id
-  image_processing (~> 1.12)
+  image_processing
   jbuilder (~> 2.11)
   listen (~> 3.3)
   pg
@@ -393,6 +399,8 @@ DEPENDENCIES
   rspec-rails
   rspec-support
   rubocop
+  rubocop-faker
+  rubocop-performance
   rubocop-rails
   rubocop-rspec
   sass-rails (>= 6)

@@ -45,3 +45,4 @@ yarn-debug.log*
 /config/credentials/development.key
 .aws
 coverage
+tags

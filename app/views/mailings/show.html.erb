@@ -1,0 +1,48 @@
+<div class="feature" style="background-image: url(<%= asset_path 'banner_nieuws.jpg' %>) ">
+    <div class="container  typeset">
+    </div>
+</div>
+<main class="main  container">
+  <div class="content">
+  <article class="article  article--post  typeset">
+    <h1><%= @mailing.title %></h1>
+    <section class="section  typeset">
+      <% if current_user.admin? %>
+        <%= link_to 'Bewerken', edit_mailing_path(@mailing), class: 'button btn btn-primary', style: "background: #FBB901" %>
+        <% if @mailing.mailing_send == false %>
+          <%= link_to "/mailings/#{@mailing.slug}/verzenden", class: 'button btn btn-primary', style: "background: #9A6836" do %>
+            <span class="glyphicon glyphicon-pencil"></span>
+            Vesturen
+          <% end %>
+        <% end %>
+        <%= link_to 'Verwijderen', @mailing, class: 'button btn btn-primary', style: "background: #FF8000", method: :delete, data: { confirm: 'Weet je het zeker?' } %>
+      <% end %>
+    </section>
+    <small class="small  post-meta">
+      &nbsp;&middot;&nbsp;<time datetime="<%= @mailing.published_at %>" class="time"><%= @mailing.published_at.strftime("%d %B %Y")  %></time>
+    </small>
+    <% if @mailing.mailing_send == true %>
+      <small class="small  post-meta">
+        &nbsp;&middot;&nbsp; (verzonden op <%= @mailing.send_at.strftime("%d %B %Y")  %>)
+      </small>
+    <% end %>
+    <%= @mailing.content %>
+    <p>
+      <% if @mailing.attachment.attached? == false %>
+        <p>No file attached</p>
+      <% elsif @mailing.attachment.previewable? %>
+        <%= link_to(image_tag(@mailing.attachment.preview(resize: "640x480>")),  rails_blob_path(@mailing.attachment, disposition: "attachment")) %>
+      <% elsif @mailing.attachment.variable? %>
+        <%= link_to(image_tag(@mailing.attachment.variant(resize: "640x480")), rails_blob_path(@mailing.attachment, disposition: "attachment"))%>
+      <% else %>
+        <%= link_to "Download #{@mailing.attachment.blob.filename}", rails_blob_path(@mailing.attachment, disposition: "attachment") %>
+      <% end %>
+    </p>
+    <p>
+      <%= image_tag url_for(@mailing.image) %>
+    </p>
+    <%= render partial: '/common/share' %>
+  </article>
+  </div>
+  <%= render partial: '/mailings/aside' %>
+</main>
