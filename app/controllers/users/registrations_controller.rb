@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # controllers/users/registrations_controller.rb
 module Users
   class RegistrationsController < Devise::RegistrationsController

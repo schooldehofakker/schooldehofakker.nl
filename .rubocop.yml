@@ -8,10 +8,23 @@ AllCops:
   NewCops: enable
   Exclude:
     - 'bin/**/*'
+    - 'config/**/*'
     - 'db/**/*'
     - 'script/**/*'
-    - 'bin/**/*'
+    - 'lib/**/*'
     - 'node_modules/**/*'
+    - 'spec/**/*'
+    - 'README.md'
+    - 'Procfile'
+    - 'config.ru'
+    - 'package.json'
+    - 'Rakefile'
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
 
 Layout/LineLength:
   Max: 100

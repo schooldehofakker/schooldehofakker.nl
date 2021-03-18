@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class MailingsController < ApplicationController
   before_action :set_mailing, only: %i[show edit update destroy]
   before_action :set_mailing_by_slug, only: %i[send_mailing]

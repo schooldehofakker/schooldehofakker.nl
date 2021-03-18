@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class HofnieuwsMailer < ApplicationMailer
   def send_hofnieuws_email(user, mailing)
     @user = user

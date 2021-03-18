@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'contentful'
 
 # ApplicationController
@@ -27,7 +29,8 @@ class ApplicationController < ActionController::Base
   # cache agenda items
   def check_agenda
     @agenda ||= cache_data(key: 'nieuws', time: 1.day) do
-      @content.entries(content_type: 'agenda', order: 'fields.from', limit: 5, 'fields.from[gte]' => Time.now.strftime('%Y-%m-%d'))
+      @content.entries(content_type: 'agenda', order: 'fields.from', limit: 5,
+                       'fields.from[gte]' => Time.zone.now.strftime('%Y-%m-%d'))
     end
   end
 

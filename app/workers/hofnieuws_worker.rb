@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Handle Hofnieuws mailer via sidekiq to enable async sending
 class HofnieuwsWorker
   include Sidekiq::Worker
