@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Contact mailer
 class ContactMailer < ApplicationMailer
   def contact_email(name, email, message)

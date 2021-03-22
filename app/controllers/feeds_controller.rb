@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # app/controllers/feeds_controller.rb
 class FeedsController < ApplicationController
   layout false

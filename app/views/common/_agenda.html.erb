@@ -1,12 +1,11 @@
-<% agenda = @content.entries(content_type:'agenda', order: 'fields.from', limit: 5, 'fields.from[gte]' => Time.now.strftime("%Y-%m-%d")) %>
-<% if !agenda.blank? %>
+<% if !@agenda.blank? %>
   <h3>Agenda</h3>
   <p>
-  <% agenda.each do |a| %>
+  <% @agenda.each do |a| %>
     <% if a.from === a.to %>
-      <%= a.from.strftime("%d-%m") %>: <%= a.title %>
+      <%= a.from.strftime("%d-%m") %> - <%= a.title %>
     <% else %>
-      <%= a.from.strftime("%d-%m") %> / <%= a.to.strftime("%d-%m") %>: <%= a.title %>
+      <%= a.from.strftime("%d-%m") %> / <%= a.to.strftime("%d-%m") %> - <%= a.title %>
     <% end %>
     <br/>
   <% end %>

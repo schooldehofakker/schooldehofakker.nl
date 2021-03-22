@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: news
@@ -22,7 +24,8 @@ class News < ApplicationRecord
 
   has_rich_text :content
 
-  enum status: { published: 'published', unpublished: 'unpublished', deleted: 'deleted ' }, _scopes: false
+  enum status: { published: 'published', unpublished: 'unpublished', deleted: 'deleted ' },
+       _scopes: false
 
   validates :title, presence: true, length: { minimum: 5 }
   validates :content, presence: true

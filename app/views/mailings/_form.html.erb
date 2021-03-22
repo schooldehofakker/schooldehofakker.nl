@@ -1,0 +1,69 @@
+<%= form_with(model: mailing) do |form| %>
+  <% if mailing.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(mailing.errors.count, "error") %> prohibited this mailing from being saved:</h2>
+
+      <ul>
+        <% mailing.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.rich_text_area :content %>
+  </div>
+
+  <div class="field">
+    <%= form.label :published_at %>
+    <%= form.datetime_select :published_at %>
+  </div>
+
+   <div class="field">
+    <%= form.label :attachment %>
+    <%= form.file_field :attachment %>
+  </div>
+
+  <div>
+    <% if @mailing.attachment.attached? == false %>
+      <p>No file attached</p>
+    <% elsif @mailing.attachment.previewable? %>
+      <%= link_to(image_tag(@mailing.attachment.preview(resize: "640x480>")),  rails_blob_path(@mailing.attachment, disposition: "attachment")) %>
+    <% elsif @mailing.attachment.variable? %>
+      <%= link_to(image_tag(@mailing.attachment.variant(resize: "640x480")), rails_blob_path(@mailing.attachment, disposition: "attachment"))%>
+    <% else %>
+      <%= link_to "#{@mailing.attachment.blob.filename}", rails_blob_path(@mailing.attachment, disposition: "attachment") %>
+    <% end %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.file_field :image %>
+  </div>
+
+  <div>
+    <% if @mailing.image.attached? == false %>
+      <p>No image attached</p>
+    <% elsif @mailing.image.previewable? %>
+      <%= image_tag(@mailing.image.preview(resize: "480x640")) %>
+    <% else @mailing.image.variable? %>
+      <%= image_tag(@mailing.image.variant(resize: "480x640")) %>
+    <% end %>
+   </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

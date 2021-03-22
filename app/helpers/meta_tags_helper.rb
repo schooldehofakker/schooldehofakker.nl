@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # app/helpers/meta_tags_helper.rb
 module MetaTagsHelper
   def meta_title
@@ -5,7 +7,9 @@ module MetaTagsHelper
   end
 
   def meta_description
+    # rubocop:disable Layout/LineLength
     content_for?(:meta_description) ? content_for(:meta_description) : DEFAULT_META['meta_description']
+    # rubocop:enable Layout/LineLength
   end
 
   def meta_image

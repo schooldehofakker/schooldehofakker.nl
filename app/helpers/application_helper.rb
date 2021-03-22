@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module ApplicationHelper
   # helper to check whether selected page must change style to
   # accentuate being selected

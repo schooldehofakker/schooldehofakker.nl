@@ -1,3 +1,42 @@
 inherit_from: .rubocop_todo.yml
+require: 
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-rspec
+
 AllCops:
   NewCops: enable
+  Exclude:
+    - 'bin/**/*'
+    - 'config/**/*'
+    - 'db/**/*'
+    - 'script/**/*'
+    - 'lib/**/*'
+    - 'node_modules/**/*'
+    - 'spec/**/*'
+    - 'README.md'
+    - 'Procfile'
+    - 'config.ru'
+    - 'package.json'
+    - 'Rakefile'
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+
+Layout/LineLength:
+  Max: 100
+
+Metrics/BlockLength:
+  Exclude:
+    - config/**/*
+    - spec/**/*
+
+Lint/AmbiguousBlockAssociation:
+  Exclude:
+    - spec/**/*
+
+Style/Documentation:
+  Enabled: false

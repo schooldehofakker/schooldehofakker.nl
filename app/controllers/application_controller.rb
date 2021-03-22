@@ -1,8 +1,11 @@
+# frozen_string_literal: true
+
 require 'contentful'
 
 # ApplicationController
 class ApplicationController < ActionController::Base
   before_action :check_contentful_client
+  before_action :check_agenda
   before_action :create_richtext_renderer
 
   def current_user
@@ -22,6 +25,14 @@ class ApplicationController < ActionController::Base
   end
 
   private
+
+  # cache agenda items
+  def check_agenda
+    @agenda ||= cache_data(key: 'nieuws', time: 1.day) do
+      @content.entries(content_type: 'agenda', order: 'fields.from', limit: 5,
+                       'fields.from[gte]' => Time.zone.now.strftime('%Y-%m-%d'))
+    end
+  end
 
   # Creates a Contentful Client Instance
   def check_contentful_client

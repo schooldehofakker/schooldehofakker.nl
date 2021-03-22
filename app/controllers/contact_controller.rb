@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # index page
 class ContactController < ApplicationController
   def index

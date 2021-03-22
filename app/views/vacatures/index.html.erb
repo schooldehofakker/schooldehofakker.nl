@@ -9,8 +9,10 @@
     <% if @vacatures.empty? %>
       Er zijn momenteel geen vacatures op de Hofakker
     <% end %>
-    <% if !@vacatures.empty? %>
-      Momenteel zijn er <%= @vacatures.size %> vacatures:
+    <% if @vacatures.size == 1 %>
+      <i>Momenteel is er <%= @vacatures.size %> vacature</i>
+    <% else %>
+      <i>Momenteel zijn er <%= @vacatures.size %> vacatures</i>
     <% end %>
     <% @vacatures.each do |v| %>
       <h3><%= v.titel %></h3>

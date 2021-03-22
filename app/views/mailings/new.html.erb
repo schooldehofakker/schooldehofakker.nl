@@ -1,0 +1,19 @@
+<% if current_user.admin? %>
+  <div class="feature" style="background-image: url(<%= asset_path 'banner_nieuws.jpg' %>) ">
+    <div class="container  typeset">
+    </div>
+  </div>
+  <main class="main  container">
+    <div class="content">
+    <article class="article  article--post  typeset">
+      <h1>Nieuwe mailing</h1>
+      <section class="section  typeset">
+        <%= render 'form', mailing: @mailing %>
+      </section>
+      <small class="small  post-meta">
+        <%= link_to 'Back', mailings_path %>
+      </small>
+    </article>
+    </div>
+  </main>
+<% end %>

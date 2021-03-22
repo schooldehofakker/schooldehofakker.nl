@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Default applications mailer
 
 class ApplicationMailer < ActionMailer::Base
