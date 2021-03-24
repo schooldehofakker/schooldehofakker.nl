@@ -8,14 +8,14 @@
     <h1><%= @mailing.title %></h1>
     <section class="section  typeset">
       <% if current_user.admin? %>
-        <%= link_to 'Bewerken', edit_mailing_path(@mailing), class: 'button btn btn-primary', style: "background: #FBB901" %>
         <% if @mailing.mailing_send == false %>
+          <%= link_to 'Bewerken', edit_mailing_path(@mailing), class: 'button btn btn-primary', style: "background: #FBB901" %>
           <%= link_to "/mailings/#{@mailing.slug}/verzenden", class: 'button btn btn-primary', style: "background: #9A6836" do %>
             <span class="glyphicon glyphicon-pencil"></span>
             Vesturen
           <% end %>
+          <%= link_to 'Verwijderen', @mailing, class: 'button btn btn-primary', style: "background: #FF8000", method: :delete, data: { confirm: 'Weet je het zeker?' } %>
         <% end %>
-        <%= link_to 'Verwijderen', @mailing, class: 'button btn btn-primary', style: "background: #FF8000", method: :delete, data: { confirm: 'Weet je het zeker?' } %>
       <% end %>
     </section>
     <small class="small  post-meta">
