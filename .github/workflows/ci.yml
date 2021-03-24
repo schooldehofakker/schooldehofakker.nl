@@ -33,7 +33,7 @@ jobs:
 
       - name: Install gem files
         run: |
-          gem install bundler -v '2.2.5'
+          gem install bundler -v '2.2.15'
           bundle install
 
       - name: Run ruby code linter (Rubocop)
