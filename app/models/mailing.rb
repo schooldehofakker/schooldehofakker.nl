@@ -6,7 +6,6 @@
 #
 #  id           :bigint           not null, primary key
 #  description  :string           not null
-#  mailing_send :boolean          default(FALSE)
 #  published_at :datetime
 #  send_at      :datetime
 #  sender       :string
@@ -33,4 +32,8 @@ class Mailing < ApplicationRecord
   validates :description, presence: true
   validates :title, presence: true, length: { minimum: 5 }, uniqueness: true
   validates :slug, presence: true, uniqueness: true
+
+  def mailing_send
+    !send_at.nil?
+  end
 end
