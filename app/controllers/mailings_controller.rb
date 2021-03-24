@@ -70,7 +70,6 @@ class MailingsController < ApplicationController
       end
       @mailing.sender = current_user.id
       @mailing.send_at = Time.zone.now
-      @mailing.mailing_send = true
       @mailing.save!
     end
     redirect_to @mailing, notice: "Nieuwsbrief #{@mailing.slug} is verzonden"

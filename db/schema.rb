@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_19_143933) do
+ActiveRecord::Schema.define(version: 2021_03_24_142938) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -74,7 +74,6 @@ ActiveRecord::Schema.define(version: 2021_02_19_143933) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "slug", null: false
     t.datetime "send_at"
-    t.boolean "mailing_send", default: false
     t.string "sender"
     t.index ["slug"], name: "index_mailings_on_slug", unique: true
     t.index ["title"], name: "index_mailings_on_title", unique: true

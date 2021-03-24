@@ -4,7 +4,6 @@
 #
 #  id           :bigint           not null, primary key
 #  description  :string           not null
-#  mailing_send :boolean          default(FALSE)
 #  published_at :datetime
 #  send_at      :datetime
 #  sender       :string
@@ -29,7 +28,6 @@ RSpec.describe Mailing, type: :model do
   end
 
   it { is_expected.to have_db_column(:description).of_type(:string).with_options(null: false) }
-  it { is_expected.to have_db_column(:mailing_send).of_type(:boolean) }
   it { is_expected.to have_db_column(:published_at).of_type(:datetime) }
   it { is_expected.to have_db_column(:send_at).of_type(:datetime) }
   it { is_expected.to have_db_column(:sender).of_type(:string) }

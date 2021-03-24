@@ -48,21 +48,6 @@
     <% end %>
   </div>
 
-  <div class="field">
-    <%= form.label :image %>
-    <%= form.file_field :image %>
-  </div>
-
-  <div>
-    <% if @mailing.image.attached? == false %>
-      <p>No image attached</p>
-    <% elsif @mailing.image.previewable? %>
-      <%= image_tag(@mailing.image.preview(resize: "480x640")) %>
-    <% else @mailing.image.variable? %>
-      <%= image_tag(@mailing.image.variant(resize: "480x640")) %>
-    <% end %>
-   </div>
-
   <div class="actions">
     <%= form.submit %>
   </div>
