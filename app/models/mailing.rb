@@ -22,7 +22,6 @@
 #
 class Mailing < ApplicationRecord
   has_one_attached :attachment
-  has_one_attached :image
   has_rich_text :content
 
   self.implicit_order_column = :published_at
@@ -32,7 +31,6 @@ class Mailing < ApplicationRecord
 
   validates :content, presence: true
   validates :description, presence: true
-  validates :image, presence: true
   validates :title, presence: true, length: { minimum: 5 }, uniqueness: true
   validates :slug, presence: true, uniqueness: true
 end

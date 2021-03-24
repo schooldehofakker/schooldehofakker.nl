@@ -38,9 +38,6 @@
         <%= link_to "Download #{@mailing.attachment.blob.filename}", rails_blob_path(@mailing.attachment, disposition: "attachment") %>
       <% end %>
     </p>
-    <p>
-      <%= image_tag url_for(@mailing.image) %>
-    </p>
     <%= render partial: '/common/share' %>
   </article>
   </div>
