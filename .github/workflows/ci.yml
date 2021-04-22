@@ -24,7 +24,7 @@ jobs:
       - name: Set up Ruby
         uses: actions/setup-ruby@v1
         with:
-          ruby-version: 2.7.2
+          ruby-version: 2.7.3
 
       - name: Set up Node
         uses: actions/setup-node@v1
@@ -33,7 +33,7 @@ jobs:
 
       - name: Install gem files
         run: |
-          gem install bundler -v '2.2.15'
+          gem install bundler -v '2.2.16'
           bundle install
 
       - name: Run ruby code linter (Rubocop)
