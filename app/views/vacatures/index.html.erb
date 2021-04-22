@@ -11,7 +11,8 @@
     <% end %>
     <% if @vacatures.size == 1 %>
       <i>Momenteel is er <%= @vacatures.size %> vacature</i>
-    <% else %>
+    <% end %>
+    <% if @vacatures.size > 1 %>
       <i>Momenteel zijn er <%= @vacatures.size %> vacatures</i>
     <% end %>
     <% @vacatures.each do |v| %>
