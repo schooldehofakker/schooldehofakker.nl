@@ -9,7 +9,7 @@ x-app: &app
       PG_MAJOR: '11'
       NODE_MAJOR: '12'
       YARN_VERSION: '1.22.5'
-      BUNDLER_VERSION: '2.2.16'
+      BUNDLER_VERSION: '2.2.17'
   environment: &env
     NODE_ENV: development
     RAILS_ENV: ${RAILS_ENV:-development}
@@ -85,7 +85,7 @@ services:
       interval: 5s
 
   redis:
-    image: redis:4
+    image: redis
     volumes:
       - redis:/data
     ports:

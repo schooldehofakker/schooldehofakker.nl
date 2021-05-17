@@ -15,7 +15,7 @@ gem 'friendly_id' # FriendlyId is the "Swiss Army bulldozer" of slugging and per
 gem 'image_processing' # Use Active Storage variant
 gem 'jbuilder', '~> 2.11' # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'pg'
-gem 'puma', '~> 5.2' # Use Puma as the app server
+gem 'puma', '~> 5.3' # Use Puma as the app server
 gem 'rails', '~> 6.1.3'
 gem 'recaptcha' # This gem provides helper methods for the reCAPTCHA API
 gem 'redis'
@@ -27,7 +27,7 @@ gem 'sitemap_generator' # SitemapGenerator is the easiest way to generate Sitema
 # automatically makes the rake tasks available to you.
 gem 'turbolinks', '~> 5' # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'view_component'
-gem 'webpacker', '~> 5.2' # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
+gem 'webpacker', '~> 5.3' # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'whenever'
 
 group :development, :test do
