@@ -27,7 +27,7 @@ gem 'sitemap_generator' # SitemapGenerator is the easiest way to generate Sitema
 # automatically makes the rake tasks available to you.
 gem 'turbolinks', '~> 5' # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'view_component'
-gem 'webpacker', '~> 5.3' # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
+gem 'webpacker', '~> 5.4' # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'whenever'
 
 group :development, :test do
