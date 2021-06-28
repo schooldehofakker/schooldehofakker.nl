@@ -9,8 +9,7 @@ class ContactMailer < ApplicationMailer
     @message = message
     mail(
       to: Rails.application.credentials.email[:contact],
-      from: @email,
-      subject: 'Contact via schooldehofakker.nl'
+      subject: "Een bericht van #{@name} (#{@email}) via de website"
     )
   end
 end
