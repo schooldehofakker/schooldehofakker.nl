@@ -67,7 +67,7 @@ group :test do
   # alternative to its default testing framework, Minitest.
   gem 'rspec-support'
   gem 'selenium-webdriver'
-  gem 'shoulda-matchers', '~> 4.5'
+  gem 'shoulda-matchers', '~> 5.0'
   gem 'simplecov'
   gem 'webdrivers' # Easy installation and use of web drivers to run system tests with browsers
 end
