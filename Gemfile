@@ -47,7 +47,7 @@ end
 
 group :development do
   gem 'annotate'
-  gem 'listen', '~> 3.5'
+  gem 'listen', '~> 3.6'
   gem 'pry-rails'
   gem 'rails-erd'
   gem 'spring' # Spring speeds up development by keeping your application running in the background.
