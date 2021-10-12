@@ -15,7 +15,7 @@ gem 'friendly_id' # FriendlyId is the "Swiss Army bulldozer" of slugging and per
 gem 'image_processing' # Use Active Storage variant
 gem 'jbuilder', '~> 2.11' # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'pg'
-gem 'puma', '~> 5.4' # Use Puma as the app server
+gem 'puma', '~> 5.5' # Use Puma as the app server
 gem 'rails', '~> 6.1.4'
 gem 'recaptcha' # This gem provides helper methods for the reCAPTCHA API
 gem 'redis'
